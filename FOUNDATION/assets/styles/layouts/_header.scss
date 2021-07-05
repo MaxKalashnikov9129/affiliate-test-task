@@ -1,0 +1,13 @@
+.header {
+  &__row {
+    @include flex-grid-row();
+  }
+
+  &__logo {
+    @include flex-grid-column(3);
+  }
+
+  &__nav {
+    @include flex-grid-column(9);
+  }
+}

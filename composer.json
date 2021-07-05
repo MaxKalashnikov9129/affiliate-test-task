@@ -1,0 +1,21 @@
+{
+  "name": "beetroot/starter",
+  "type": "wordpress-theme",
+  "license": "MIT",
+  "require-dev": {
+    "php": ">=7.0",
+    "humanmade/coding-standards": "dev-master",
+    "10up/phpcs-composer": "dev-master"
+  },
+  "config": {
+    "platform": {
+      "php": "7.3"
+    }
+  },
+  "minimum-stability": "dev",
+  "scripts": {
+    "lint": "phpcs .",
+    "lint-fix": "phpcbf ."
+  },
+  "require": {}
+}

@@ -1,0 +1,131 @@
+.block-editor {
+  .editor-post-title {
+    padding: 0 17px;
+
+    @media screen and (min-width: 600px) {
+      padding-left: 35px;
+      padding-right: 15px;
+    }
+
+    &__block {
+      @media screen and (min-width: 600px) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    &__input {
+      border-width: 1px 1px 1px 0;
+    }
+
+    .editor-post-permalink {
+      left: 0;
+      right: 0;
+
+      @media screen and (min-width: 600px) {
+        margin: 0 0 0 3px;
+      }
+    }
+  }
+
+  .editor-post-featured-image .components-responsive-wrapper__content {
+    width: 100%;
+  }
+
+  .editor-block-list__layout {
+    padding: 0 30px;
+
+    @media screen and (min-width: 600px) {
+      padding-left: 75px;
+      padding-right: 55px;
+    }
+  }
+
+  .wp-block {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+
+    &.editor-default-block-appender.block-editor-default-block-appender {
+      @media screen and (min-width: 600px) {
+        margin: 0 -40px;
+      }
+    }
+  }
+
+  .editor-post-publish-panel {
+    @media screen and (min-width: 600px) {
+      width: 25%;
+    }
+  }
+
+  &-block-list__empty-block-inserter,
+  &-default-block-appender &-inserter {
+    @media screen and (min-width: 600px) {
+      left: -59px;
+    }
+  }
+}
+
+.editor-styles-wrapper {
+  ul {
+    list-style: none;
+  }
+
+  .block-library-list {
+    ol {
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .editor-block-list__layout {
+    ul {
+      list-style: none;
+    }
+
+    &.is-sidebar-opened {
+      .edit-post-sidebar,
+      .edit-post-plugin-sidebar__sidebar-layout {
+        @media screen and (min-width: 783px) {
+          width: 280px;
+        }
+
+        @media screen and (min-width: 1025px) {
+          width: 25%;
+        }
+      }
+
+      .edit-post-layout__content {
+        @media screen and (min-width: 783px) {
+          margin-right: 280px;
+        }
+
+        @media screen and (min-width: 1025px) {
+          margin-right: 25%;
+        }
+      }
+    }
+  }
+}
+
+.edit-post-layout {
+  .components-notice-list {
+    z-index: 100;
+  }
+}
+
+.wp-core-ui {
+  .attachment {
+    .landscape {
+      img {
+        max-width: none;
+      }
+    }
+  }
+}

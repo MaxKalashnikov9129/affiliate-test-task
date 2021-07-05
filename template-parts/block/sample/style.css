@@ -1,0 +1,7 @@
+.sample {
+	padding: 15px;
+	height: 200px;
+	overflow-y: auto;
+	background-color: black;
+	color: white;
+}

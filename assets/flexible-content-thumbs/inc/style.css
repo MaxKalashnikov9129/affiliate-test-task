@@ -1,0 +1,15 @@
+.module-preview {
+	position: absolute;
+	right: 100%;
+	bottom: 0;
+	z-index: 1;
+	background-color: #fff;
+	padding: 10px;
+}
+.module-preview img {
+	width: auto;
+	height: 300px;
+}
+.acf-tooltip li:hover {
+	background-color:#0074a9;
+}

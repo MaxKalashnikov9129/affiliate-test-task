@@ -1,0 +1,21 @@
+/*
+Use [$menu-submenu-background, $base-color, $highlight-color, $notification-color]
+for $colors parameter of wp_admin_css_color() function
+in admin_color_scheme() method of WP_Dashboard_Customizer class
+ */
+$base-color: #23282d;
+$menu-submenu-background: darken($base-color, 7%);
+$highlight-color: #0073aa;
+$notification-color: #d54e21;
+
+// Check wp-admin/css/colors/_variables.scss for default color scheme variables, their dependencies and relations.
+$body-background: #f1f1f1;
+$text-color: #fff;
+$icon-color: hsl(hue($base-color), 7%, 95%);
+$link: #0073aa;
+$link-focus: lighten($link, 10%);
+$button-color: $highlight-color;
+$form-checked: $highlight-color;
+
+// Import base admin stylesheet placed in wp-admin/css/colors/_admin.scss
+@import "../../../../../../wp-admin/css/colors/admin";

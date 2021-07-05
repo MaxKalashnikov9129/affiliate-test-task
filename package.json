@@ -1,0 +1,136 @@
+{
+  "name": "beetroot",
+  "version": "1.0.0",
+  "private": true,
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "prettier": {},
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "no-empty-source": null,
+      "max-line-length": [
+        120,
+        {
+          "ignorePattern": "(https?://[0-9,a-z]*.*)|(/^transition\\s+/)|(/^background\\s+/)|(/^transform\\s+/)"
+        }
+      ],
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "extend",
+            "at-root",
+            "debug",
+            "warn",
+            "error",
+            "if",
+            "else",
+            "for",
+            "each",
+            "while",
+            "mixin",
+            "include",
+            "content",
+            "return",
+            "function"
+          ]
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "build": "webpack --progress --config assets/build/webpack.config.js",
+    "build:production": "webpack --env.production --progress --config assets/build/webpack.config.js",
+    "build:profile": "webpack --progress --profile --json --config assets/build/webpack.config.js",
+    "start": "webpack --hide-modules --watch --config assets/build/webpack.config.js",
+    "rmdist": "rimraf dist",
+    "lint": "npm run -s lint:scripts && npm run -s lint:styles",
+    "lint:scripts": "eslint assets/scripts assets/build",
+    "lint:styles": "stylelint \"assets/styles/**/*.{css,sass,scss,sss,less}\"",
+    "test": "npm run -s lint",
+    "test:visual-init": "cd tests/visual/ && backstop init && rm backstop.json",
+    "test:visual-reference": "cd tests/visual/ && ../../node_modules/backstopjs/cli/index.js reference --config=index.js",
+    "test:visual": "cd tests/visual/ && ../../node_modules/backstopjs/cli/index.js test --config=index.js",
+    "test:visual-approve": "cd tests/visual/ && ../../node_modules/backstopjs/cli/index.js approve --config=index.js"
+  },
+  "testing": {
+    "urls": {
+      "homepage": "http://test.loc",
+      "article": "http://test.loc/event-report/hello-world",
+      "search-results": "https://test.loc/?s=hello"
+    },
+    "accessibility": {
+      "compliance": "WCAG2AA"
+    }
+  },
+  "engines": {
+    "node": ">= 8.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.4.4",
+    "@wordpress/babel-preset-default": "^4.3.0",
+    "autoprefixer": "^8.2.0",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "backstopjs": "^4.1.9",
+    "browser-sync": "~2.26.7",
+    "browserslist": "^4.6.3",
+    "browsersync-webpack-plugin": "^0.6.0",
+    "bs-html-injector": "~3.0",
+    "buble-loader": "^0.4.1",
+    "cache-loader": "~1.2.0",
+    "clean-webpack-plugin": "^0.1.18",
+    "copy-globs-webpack-plugin": "^0.2.0",
+    "css-loader": "^0.28.9",
+    "cssnano": "~v4.0.0-rc.2",
+    "eslint": "^5.16.0",
+    "eslint-loader": "~2.1.2",
+    "eslint-plugin-import": "~2.11.0",
+    "eslint-plugin-react": "^7.14.2",
+    "extract-text-webpack-plugin": "~3.0.2",
+    "file-loader": "^1.1.6",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "imagemin-mozjpeg": "~7.0.0",
+    "imagemin-webpack-plugin": "~2.1.1",
+    "import-glob": "~1.5",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "~2.1.0",
+    "postcss-safe-parser": "~3.0",
+    "prettier": "1.14.0",
+    "prettier-eslint": "^9.0.0",
+    "prettier-eslint-cli": "^5.0.0",
+    "prettier-stylelint": "^0.4.2",
+    "resolve-url-loader": "~2.3.0",
+    "rimraf": "~2.6",
+    "sass-loader": "~7.1.0",
+    "style-loader": "^0.20.1",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "~18.2.0",
+    "stylelint-webpack-plugin": "^0.10.1",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "url-loader": "^0.6.2",
+    "webpack": "~3.11.0",
+    "webpack-assets-manifest": "^1.0.0",
+    "webpack-dev-middleware": "~2.0.4",
+    "webpack-hot-middleware": "~2.22.0",
+    "webpack-merge": "~4.1.1",
+    "webpackbar": "^3.2.0",
+    "yargs": "~11.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "font-awesome": "~4.7",
+    "foundation-sites": "^6.5.3",
+    "motion-ui": "~2.0.3",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.15.0"
+  }
+}

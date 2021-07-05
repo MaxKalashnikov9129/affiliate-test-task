@@ -1,0 +1,16 @@
+@import '../common/variables';
+
+body {
+  background-color: $color-secondary;
+}
+
+.login {
+  h1 {
+    a {
+      background-image: none;
+      background-position: center center;
+      background-size: contain;
+      width: 100%;
+    }
+  }
+}
