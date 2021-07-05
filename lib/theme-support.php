@@ -6,11 +6,11 @@
  * @package Beetroot
  */
 
-if ( ! function_exists( 'beetroot_theme_support' ) ) :
+if ( ! function_exists( 'cda_theme_support' ) ) :
 	/**
 	 * Add theme supports
 	 */
-	function beetroot_theme_support() {
+	function cda_theme_support() {
 		// Add language support: @link {https://codex.wordpress.org/Multilingual_WordPress}
 		load_theme_textdomain( 'wp_dev', get_template_directory() . '/languages' );
 
@@ -65,5 +65,5 @@ if ( ! function_exists( 'beetroot_theme_support' ) ) :
 		);
 	}
 
-	add_action( 'after_setup_theme', 'beetroot_theme_support' );
+	add_action( 'after_setup_theme', 'cda_theme_support' );
 endif;

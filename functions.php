@@ -28,6 +28,8 @@ $theme_includes = [
 	'/lib/acf_field_groups_type.php',          // ACF Field Groups Organizer
 	'/lib/acf_blocks_loader.php',              // ACF Blocks Loader
 	'/lib/wp_dashboard_customizer.php',        // WP Dashboard customizer
+	'/lib/acf_customs.php',                    // ACF functionality not native for starter-theme
+
 ];
 
 foreach ( $theme_includes as $file ) {

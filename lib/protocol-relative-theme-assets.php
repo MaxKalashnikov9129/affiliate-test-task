@@ -5,12 +5,12 @@
  * @package Beetroot
  */
 
-if ( ! class_exists( 'Beetroot_Protocol_Relative_Theme_Assets' ) ) :
+if ( ! class_exists( 'cda_Protocol_Relative_Theme_Assets' ) ) :
 
 	/**
-	 * Beetroot_Protocol_Relative_Theme_Assets class
+	 * cda_Protocol_Relative_Theme_Assets class
 	 */
-	class Beetroot_Protocol_Relative_Theme_Assets {
+	class cda_Protocol_Relative_Theme_Assets {
 		/**
 		 * Plugin URI: https://github.com/ryanjbonnell/Protocol-Relative-Theme-Assets
 		 * Description: Transforms enqueued CSS and JavaScript theme URLs to use protocol-relative paths.
@@ -100,5 +100,5 @@ if ( ! class_exists( 'Beetroot_Protocol_Relative_Theme_Assets' ) ) :
 		}
 	}
 
-	$beetroot_protocol_relative_theme_assets = new Beetroot_Protocol_Relative_Theme_Assets();
+	$cda_protocol_relative_theme_assets = new cda_Protocol_Relative_Theme_Assets();
 endif;

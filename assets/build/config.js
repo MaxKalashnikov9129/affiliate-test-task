@@ -42,19 +42,19 @@ if (process.env.NODE_ENV === undefined) {
 
 /**
  * If your publicPath differs between environments, but you know it at compile time,
- * then set BEETROOT_DIST_PATH as an environment variable before compiling.
+ * then set cdaDIST_PATH as an environment variable before compiling.
  * Example:
- *   BEETROOT_DIST_PATH=/wp-content/themes/beetroot-starter/dist yarn build:production
+ *   cdaDIST_PATH=/wp-content/themes/beetroot-starter/dist yarn build:production
  */
-if (process.env.BEETROOT_DIST_PATH) {
-  module.exports.publicPath = process.env.BEETROOT_DIST_PATH;
+if (process.env.cdaDIST_PATH) {
+  module.exports.publicPath = process.env.cdaDIST_PATH;
 }
 
 /**
  * If you don't know your publicPath at compile time, then uncomment the lines
- * below and use WordPress's wp_localize_script() to set BEETROOT_DIST_PATH global.
+ * below and use WordPress's wp_localize_script() to set cdaDIST_PATH global.
  * Example:
- *   wp_localize_script('beetroot/main.js', 'BEETROOT_DIST_PATH', get_theme_file_uri('dist/'))
+ *   wp_localize_script('beetroot/main.js', 'cdaDIST_PATH', get_theme_file_uri('dist/'))
  */
 // Object.keys(module.exports.entry).forEach(id =>
 //   module.exports.entry[id].unshift(path.join(__dirname, 'helpers/public-path.js')));

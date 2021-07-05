@@ -1,0 +1,32 @@
+.header {
+  &__container {
+    @include make-container();
+    @include make-container-max-widths();
+  }
+
+  &__row {
+    @include make-row();
+  }
+
+  &__brand {
+    @include make-col(3);
+  }
+
+  &__nav {
+    @include make-col(9);
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .header {
+    &__container {
+      max-width: 1440px;
+    }
+  }
+}
+
+.home {
+  .header {
+    margin: 20px 0 0;
+  }
+}

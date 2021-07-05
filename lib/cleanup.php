@@ -5,27 +5,27 @@
  * @package Beetroot
  */
 
-if ( ! function_exists( 'beetroot_start_cleanup' ) ) :
+if ( ! function_exists( 'cda_start_cleanup' ) ) :
 	/**
 	 * Start cleenup
 	 */
-	function beetroot_start_cleanup() {
-		add_action( 'init', 'beetroot_cleanup_head' );
+	function cda_start_cleanup() {
+		add_action( 'init', 'cda_cleanup_head' );
 		// Remove WP version from RSS.
-		add_filter( 'the_generator', 'beetroot_remove_rss_version' );
+		add_filter( 'the_generator', 'cda_remove_rss_version' );
 		// Clean up comment styles in the head.
-		add_action( 'wp_head', 'beetroot_remove_recent_comments_style', 1 );
+		add_action( 'wp_head', 'cda_remove_recent_comments_style', 1 );
 	}
 
-	add_action( 'after_setup_theme', 'beetroot_start_cleanup' );
+	add_action( 'after_setup_theme', 'cda_start_cleanup' );
 endif;
 
 // Clean up head.
-if ( ! function_exists( 'beetroot_cleanup_head' ) ) :
+if ( ! function_exists( 'cda_cleanup_head' ) ) :
 	/**
 	 * Head cleenup
 	 */
-	function beetroot_cleanup_head() {
+	function cda_cleanup_head() {
 		// EditURI link.
 		remove_action( 'wp_head', 'rsd_link' );
 		// Category feed links.
@@ -61,21 +61,21 @@ remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 // Remove WP version from RSS.
-if ( ! function_exists( 'beetroot_remove_rss_version' ) ) :
+if ( ! function_exists( 'cda_remove_rss_version' ) ) :
 	/**
 	 * Remove rss
 	 */
-	function beetroot_remove_rss_version() {
+	function cda_remove_rss_version() {
 		return '';
 	}
 endif;
 
 // Remove injected CSS from recent comments widget.
-if ( ! function_exists( 'beetroot_remove_recent_comments_style' ) ) :
+if ( ! function_exists( 'cda_remove_recent_comments_style' ) ) :
 	/**
 	 * Remove recent comments style
 	 */
-	function beetroot_remove_recent_comments_style() {
+	function cda_remove_recent_comments_style() {
 		global $wp_widget_factory;
 		if ( isset( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'] ) ) {
 			remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );

@@ -5,11 +5,11 @@
  * @package Beetroot
  */
 
-if ( ! function_exists( 'beetroot_posted_on' ) ) :
+if ( ! function_exists( 'cda_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
-	function beetroot_posted_on() {
+	function cda_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -40,16 +40,16 @@ if ( ! function_exists( 'beetroot_posted_on' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'beetroot_entry_footer' ) ) :
+if ( ! function_exists( 'cda_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function beetroot_entry_footer() {
+	function cda_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( esc_html__( ', ', 'wp_dev' ) );
-			if ( $categories_list && beetroot_categorized_blog() ) {
+			if ( $categories_list && cda_categorized_blog() ) {
 				/* translators: %s: Posted in %1$s */
 				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'wp_dev' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
@@ -86,8 +86,8 @@ endif;
  *
  * @return bool
  */
-function beetroot_categorized_blog() {
-	$all_the_cool_cats = get_transient( 'beetroot_categories' );
+function cda_categorized_blog() {
+	$all_the_cool_cats = get_transient( 'cda_categories' );
 	if ( false === $all_the_cool_cats ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories(
@@ -102,27 +102,27 @@ function beetroot_categorized_blog() {
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
 
-		set_transient( 'beetroot_categories', $all_the_cool_cats );
+		set_transient( 'cda_categories', $all_the_cool_cats );
 	}
 
 	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so beetroot_categorized_blog should return true.
+		// This blog has more than 1 category so cda_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so beetroot_categorized_blog should return false.
+		// This blog has only 1 category so cda_categorized_blog should return false.
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in beetroot_categorized_blog.
+ * Flush out the transients used in cda_categorized_blog.
  */
-function beetroot_category_transient_flusher() {
+function cda_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
 	}
 	// Like, beat it. Dig?
-	delete_transient( 'beetroot_categories' );
+	delete_transient( 'cda_categories' );
 }
-add_action( 'edit_category', 'beetroot_category_transient_flusher' );
-add_action( 'save_post', 'beetroot_category_transient_flusher' );
+add_action( 'edit_category', 'cda_category_transient_flusher' );
+add_action( 'save_post', 'cda_category_transient_flusher' );

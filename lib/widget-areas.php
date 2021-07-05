@@ -7,11 +7,11 @@
  */
 
 /**
- * beetroot_widgets_init
+ * cda_widgets_init
  *
  * @return void
  */
-function beetroot_widgets_init() {
+function cda_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'wp_dev' ),
@@ -24,4 +24,4 @@ function beetroot_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'beetroot_widgets_init' );
+add_action( 'widgets_init', 'cda_widgets_init' );

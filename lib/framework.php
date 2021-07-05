@@ -18,13 +18,13 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 1140;
 }
 /**
- * beetroot_navwalker class
+ * cda_navwalker class
  * Menu navigation walker
- * Class Name: beetroot_navwalker
+ * Class Name: cda_navwalker
  * GitHub URI: https://github.com/twittem/wp-beetroot-navwalker
  * Description: A custom WordPress nav walker class to implement the beetroot 3 navigation style in a custom theme using the WordPress built in menu manager.
  */
-class Beetroot_Navwalker extends Walker_Nav_Menu {
+class cda_Navwalker extends Walker_Nav_Menu {
 	/**
 	 * Walker::start_lvl()
 	 *
@@ -114,9 +114,18 @@ class Beetroot_Navwalker extends Walker_Nav_Menu {
 			 * if there is a value in the attr_title property. If the attr_title
 			 * property is NOT null we apply it as the class name for the glyphicon.
 			 */
+
 			if ( ! empty( $item->attr_title ) ) {
 				$item_output .= '<a' . $attributes . '><span class="glyphicon ' . esc_attr( $item->attr_title ) . '"></span>&nbsp;';
-			} else {              $item_output .= '<a' . $attributes . '>';
+			} else {
+				$item_icon_id = get_field('nav_item_icon', $item->ID);
+
+				$item_icon = '';
+				if( !empty($item_icon_id) ) {
+					$item_icon = '<span class="nav-item-icon">' . wp_get_attachment_image( $item_icon_id, 'full') . ' </span>';
+				}
+
+				$item_output .= $item_icon . '<a' . $attributes . '>';
 			}
 			$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 			$item_output .= ( $args->has_children && 0 === $depth ) ? ' <span class="caret"></span></a>' : '</a>';
@@ -207,7 +216,7 @@ class Beetroot_Navwalker extends Walker_Nav_Menu {
  * @param boolean $echo echo
  * @return string
  */
-function beetroot_pagination( $echo = true ) {
+function cda_pagination( $echo = true ) {
 	global $wp_query;
 	$big   = 999999999; // need an unlikely integer
 	$pages = paginate_links(
@@ -241,11 +250,11 @@ function beetroot_pagination( $echo = true ) {
  * 4 - Comments tree
  * beetroot Comments Tree
  */
-if ( ! class_exists( 'Beetroot_Comments' ) ) :
+if ( ! class_exists( 'cda_Comments' ) ) :
 	/**
 	 * Undocumented class
 	 */
-	class Beetroot_Comments extends Walker_Comment {
+	class cda_Comments extends Walker_Comment {
 		/**
 		 * tree_type
 		 *

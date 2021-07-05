@@ -20,7 +20,7 @@
 				[
 					'theme_location' => 'footer_menu',
 					'menu_id'        => 'footer-menu',
-					'walker'         => new beetroot_navwalker(),
+					'walker'         => new cdanavwalker(),
 				]
 			);
 		endif;

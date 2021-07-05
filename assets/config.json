@@ -7,8 +7,8 @@
     "editor": ["./styles/wp-dashboard/editor.scss"],
     "customizer": ["./scripts/wp-dashboard/customizer.js"]
   },
-  "publicPath": "/wp-content/themes/THEME_FOLDER_NAME",
-  "devUrl": "http://YOUR_LOCALHOST_DOMAIN.localhost",
+  "publicPath": "/wp-content/themes/casadeapostas",
+  "devUrl": "http://casadeapostas.loc",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": ["*.php", "**/*.php"]

@@ -8,15 +8,16 @@
  * @package Beetroot
  */
 
-if ( ! function_exists( 'beetroot_scripts' ) ) :
+if ( ! function_exists( 'cda_scripts' ) ) :
 	/**
-	 * beetroot_scripts
+	 * cda_scripts
 	 *
 	 * @return void
 	 */
-	function beetroot_scripts() {
+	function cda_scripts() {
 		// Enqueue the main Stylesheet.
 		wp_enqueue_style( 'main-stylesheet', asset_path( 'styles/main.css' ), false, '1.0.0', 'all' );
+		wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap', false, '1.0.0', 'all' );
 
 		// Deregister the jquery version bundled with WordPress.
 		wp_deregister_script( 'jquery' );
@@ -40,5 +41,5 @@ if ( ! function_exists( 'beetroot_scripts' ) ) :
 		endif;
 	}
 
-	add_action( 'wp_enqueue_scripts', 'beetroot_scripts' );
+	add_action( 'wp_enqueue_scripts', 'cda_scripts' );
 endif;
