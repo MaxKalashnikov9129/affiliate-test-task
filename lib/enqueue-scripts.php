@@ -17,7 +17,7 @@ if ( ! function_exists( 'cda_scripts' ) ) :
 	function cda_scripts() {
 		// Enqueue the main Stylesheet.
 		wp_enqueue_style( 'main-stylesheet', asset_path( 'styles/main.css' ), false, '1.0.0', 'all' );
-		wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap', false, '1.0.0', 'all' );
+		wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@400;700&display=swap', false, '1.0.0', 'all' );
 
 		// Deregister the jquery version bundled with WordPress.
 		wp_deregister_script( 'jquery' );

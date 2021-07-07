@@ -1,0 +1,173 @@
+/* line 2, stdin */
+
+.block-editor .editor-post-title {
+  padding: 0 17px;
+}
+
+@media screen and (min-width: 600px) {
+  /* line 2, stdin */
+
+  .block-editor .editor-post-title {
+    padding-left: 35px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  /* line 10, stdin */
+
+  .block-editor .editor-post-title__block {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* line 17, stdin */
+
+.block-editor .editor-post-title__input {
+  border-width: 1px 1px 1px 0;
+}
+
+/* line 21, stdin */
+
+.block-editor .editor-post-title .editor-post-permalink {
+  left: 0;
+  right: 0;
+}
+
+@media screen and (min-width: 600px) {
+  /* line 21, stdin */
+
+  .block-editor .editor-post-title .editor-post-permalink {
+    margin: 0 0 0 3px;
+  }
+}
+
+/* line 31, stdin */
+
+.block-editor .editor-post-featured-image .components-responsive-wrapper__content {
+  width: 100%;
+}
+
+/* line 35, stdin */
+
+.block-editor .editor-block-list__layout {
+  padding: 0 30px;
+}
+
+@media screen and (min-width: 600px) {
+  /* line 35, stdin */
+
+  .block-editor .editor-block-list__layout {
+    padding-left: 75px;
+    padding-right: 55px;
+  }
+}
+
+/* line 44, stdin */
+
+.block-editor .wp-block {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media screen and (min-width: 600px) {
+  /* line 49, stdin */
+
+  .block-editor .wp-block.editor-default-block-appender.block-editor-default-block-appender {
+    margin: 0 -40px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  /* line 56, stdin */
+
+  .block-editor .editor-post-publish-panel {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  /* line 62, stdin */
+
+  .block-editor-block-list__empty-block-inserter,
+  .block-editor-default-block-appender .block-editor-inserter {
+    left: -59px;
+  }
+}
+
+/* line 71, stdin */
+
+.editor-styles-wrapper ul {
+  list-style: none;
+}
+
+/* line 76, stdin */
+
+.editor-styles-wrapper .block-library-list ol {
+  margin: 0;
+}
+
+/* line 80, stdin */
+
+.editor-styles-wrapper .block-library-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 88, stdin */
+
+.editor-styles-wrapper .editor-block-list__layout ul {
+  list-style: none;
+}
+
+@media screen and (min-width: 783px) {
+  /* line 93, stdin */
+
+  .editor-styles-wrapper .editor-block-list__layout.is-sidebar-opened .edit-post-sidebar,
+  .editor-styles-wrapper .editor-block-list__layout.is-sidebar-opened .edit-post-plugin-sidebar__sidebar-layout {
+    width: 280px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  /* line 93, stdin */
+
+  .editor-styles-wrapper .editor-block-list__layout.is-sidebar-opened .edit-post-sidebar,
+  .editor-styles-wrapper .editor-block-list__layout.is-sidebar-opened .edit-post-plugin-sidebar__sidebar-layout {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 783px) {
+  /* line 104, stdin */
+
+  .editor-styles-wrapper .editor-block-list__layout.is-sidebar-opened .edit-post-layout__content {
+    margin-right: 280px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  /* line 104, stdin */
+
+  .editor-styles-wrapper .editor-block-list__layout.is-sidebar-opened .edit-post-layout__content {
+    margin-right: 25%;
+  }
+}
+
+/* line 118, stdin */
+
+.edit-post-layout .components-notice-list {
+  z-index: 100;
+}
+
+/* line 126, stdin */
+
+.wp-core-ui .attachment .landscape img {
+  max-width: none;
+}
+
+
+/*# sourceMappingURL=editor.css.map*/
