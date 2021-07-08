@@ -20,7 +20,7 @@
 		if ( 'post' === get_post_type() ) :
 			?>
 		<div class="entry-meta">
-			<?php cdaposted_on(); ?>
+			<?php cda_posted_on(); ?>
 		</div><!-- .entry-meta -->
 			<?php
 		endif;
@@ -47,6 +47,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php cdaentry_footer(); ?>
+		<?php cda_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

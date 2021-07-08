@@ -20193,7 +20193,13 @@ a.text-dark:focus {
   padding: 20px 0 0;
 }
 
-/* line 35, assets/styles/layouts/_header.scss */
+/* line 32, assets/styles/layouts/_header.scss */
+
+.home .header .brand {
+  padding: 0 15px;
+}
+
+/* line 39, assets/styles/layouts/_header.scss */
 
 .home .header__container nav #primary-menu li {
   display: -webkit-box;
@@ -20204,20 +20210,20 @@ a.text-dark:focus {
           align-items: center;
 }
 
-/* line 39, assets/styles/layouts/_header.scss */
+/* line 43, assets/styles/layouts/_header.scss */
 
 .home .header__container nav #primary-menu li:not(:last-child) {
   margin: 0 28px 0 0;
 }
 
-/* line 43, assets/styles/layouts/_header.scss */
+/* line 47, assets/styles/layouts/_header.scss */
 
 .home .header__container nav #primary-menu li span {
   line-height: 0;
   margin: 0 8px 0 0;
 }
 
-/* line 48, assets/styles/layouts/_header.scss */
+/* line 52, assets/styles/layouts/_header.scss */
 
 .home .header__container nav #primary-menu li a {
   font-family: 'Roboto Condensed', sans-serif;
@@ -20226,11 +20232,103 @@ a.text-dark:focus {
   text-transform: uppercase;
 }
 
+/* line 1, assets/styles/layouts/_footer.scss */
+
+.footer {
+  background: -webkit-gradient(linear, left top, left bottom, from(#09101f), color-stop(103.08%, #012325));
+  background: linear-gradient(180deg, #09101f 0%, #012325 103.08%);
+  color: #fff;
+}
+
+/* line 5, assets/styles/layouts/_footer.scss */
+
+.footer__container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url("/wp-content/uploads/2021/07/footer-background-image.svg");
+  background-repeat: no-repeat;
+  background-position: 38% 60%;
+  padding-top: 80px;
+  padding-bottom: 42px;
+}
+
+@media (min-width: 576px) {
+  /* line 5, assets/styles/layouts/_footer.scss */
+
+  .footer__container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 5, assets/styles/layouts/_footer.scss */
+
+  .footer__container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 5, assets/styles/layouts/_footer.scss */
+
+  .footer__container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 5, assets/styles/layouts/_footer.scss */
+
+  .footer__container {
+    max-width: 1140px;
+  }
+}
+
+/* line 16, assets/styles/layouts/_footer.scss */
+
+.footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+/* line 20, assets/styles/layouts/_footer.scss */
+
+.footer__row .footer-left .bottom-text {
+  max-width: 480px;
+}
+
+/* line 26, assets/styles/layouts/_footer.scss */
+
+.footer__brand {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  max-width: 25%;
+  margin: 0 0 16px;
+  display: inline-block;
+}
+
+/* line 33, assets/styles/layouts/_footer.scss */
+
+.footer__nav {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 75%;
+          flex: 0 0 75%;
+  max-width: 75%;
+}
+
 /* line 1, assets/styles/layouts/_general.scss */
 
 html,
 body {
-  background-color: #f2f2f3;
   margin: 0;
   padding: 0;
   color: #1d2129;
@@ -20243,6 +20341,58 @@ body img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
+}
+
+/* line 14, assets/styles/layouts/_general.scss */
+
+html .brand__img,
+body .brand__img {
+  margin: 0;
+}
+
+/* line 18, assets/styles/layouts/_general.scss */
+
+html .plus-sign,
+body .plus-sign {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  position: relative;
+  margin: 0 8px 0 0;
+}
+
+/* line 25, assets/styles/layouts/_general.scss */
+
+html .plus-sign::before,
+html .plus-sign::after,
+body .plus-sign::before,
+body .plus-sign::after {
+  content: '';
+  background-color: #17c37b;
+  position: absolute;
+  margin: auto;
+}
+
+/* line 33, assets/styles/layouts/_general.scss */
+
+html .plus-sign::before,
+body .plus-sign::before {
+  width: 100%;
+  height: 2px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+/* line 41, assets/styles/layouts/_general.scss */
+
+html .plus-sign::after,
+body .plus-sign::after {
+  width: 2px;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
 /* line 1, assets/styles/layouts/_front-page.scss */
@@ -20303,7 +20453,13 @@ body img {
   margin: 67px 0 0;
 }
 
-/* line 16, assets/styles/layouts/_front-page.scss */
+/* line 15, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #hero-text .top-hero-header {
+  margin: 0 0 5px;
+}
+
+/* line 18, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #hero-text .top-hero-header h1,
 .home .primary-container #hero-text .top-hero-header h2 {
@@ -20315,20 +20471,114 @@ body img {
 
 /* line 25, assets/styles/layouts/_front-page.scss */
 
+.home .primary-container #hero-text .top-hero-header h1 p,
+.home .primary-container #hero-text .top-hero-header h2 p {
+  margin: 0;
+}
+
+/* line 31, assets/styles/layouts/_front-page.scss */
+
 .home .primary-container #hero-text .top-hero-text {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 28px;
 }
 
-/* line 33, assets/styles/layouts/_front-page.scss */
+/* line 39, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #casinos-block .pre-list-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 43, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #casinos-block .pre-list-block .age-disclaimer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 160px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 48, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #casinos-block .pre-list-block .age-disclaimer-icon {
+  width: 100%;
+}
+
+/* line 52, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #casinos-block .pre-list-block .age-disclaimer-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  color: #fff;
+  margin: 0 0 0 5px;
+}
+
+/* line 62, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #casinos-block .pre-list-block .sort-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  font-weight: 700;
+  font-family: 'Roboto Condensed', sans-serif;
+  line-height: 18.75px;
+  text-transform: uppercase;
+}
+
+/* line 70, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #casinos-block .pre-list-block .sort-controls-label,
+.home .primary-container #casinos-block .pre-list-block .sort-controls-date,
+.home .primary-container #casinos-block .pre-list-block .sort-controls-rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 76, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #casinos-block .pre-list-block .sort-controls-label-icon,
+.home .primary-container #casinos-block .pre-list-block .sort-controls-date-icon,
+.home .primary-container #casinos-block .pre-list-block .sort-controls-rating-icon {
+  margin: 0 8px 0 0;
+}
+
+/* line 81, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #casinos-block .pre-list-block .sort-controls-label {
+  margin: 0 23px 0 0;
+}
+
+/* line 85, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #casinos-block .pre-list-block .sort-controls-date {
+  margin: 0 28px 0 0;
+}
+
+/* line 91, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list {
   list-style-type: none;
   padding: 0;
+  margin: 32px 0 0 0;
 }
 
-/* line 37, assets/styles/layouts/_front-page.scss */
+/* line 96, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row {
   margin: 0 0 8px;
@@ -20343,7 +20593,7 @@ body img {
   position: relative;
 }
 
-/* line 46, assets/styles/layouts/_front-page.scss */
+/* line 105, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-statuses {
   position: absolute;
@@ -20353,13 +20603,13 @@ body img {
   padding: 0;
 }
 
-/* line 53, assets/styles/layouts/_front-page.scss */
+/* line 112, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-statuses .casino-status {
   display: none;
 }
 
-/* line 56, assets/styles/layouts/_front-page.scss */
+/* line 115, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-statuses .casino-status.top-casino,
 .home .primary-container #casinos-block .casino-list .casino-row .casino-statuses .casino-status.nova-casa,
@@ -20374,40 +20624,40 @@ body img {
   display: block;
 }
 
-/* line 69, assets/styles/layouts/_front-page.scss */
+/* line 128, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-statuses .casino-status.top-casino {
   background-color: #f3c140;
   color: #8c4f07;
 }
 
-/* line 74, assets/styles/layouts/_front-page.scss */
+/* line 133, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-statuses .casino-status.nova-casa {
   background-color: #a26aeb;
   color: #fff;
 }
 
-/* line 79, assets/styles/layouts/_front-page.scss */
+/* line 138, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-statuses .casino-status.great-bonus {
   background-color: #ff8f28;
   color: #fff;
 }
 
-/* line 86, assets/styles/layouts/_front-page.scss */
+/* line 145, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row.gold-border {
   border-color: #f3c140;
 }
 
-/* line 90, assets/styles/layouts/_front-page.scss */
+/* line 149, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row.top-casion {
   border-color: #f3c140;
 }
 
-/* line 94, assets/styles/layouts/_front-page.scss */
+/* line 153, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-img,
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info,
@@ -20418,7 +20668,7 @@ body img {
   width: 100%;
 }
 
-/* line 103, assets/styles/layouts/_front-page.scss */
+/* line 162, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-img {
   display: -webkit-box;
@@ -20433,7 +20683,7 @@ body img {
   max-width: 164px;
 }
 
-/* line 111, assets/styles/layouts/_front-page.scss */
+/* line 170, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info,
 .home .primary-container #casinos-block .casino-list .casino-row .casino-secondary-info,
@@ -20441,10 +20691,12 @@ body img {
 .home .primary-container #casinos-block .casino-list .casino-row .casino-badge,
 .home .primary-container #casinos-block .casino-list .casino-row .casino-links {
   margin: 20px 0 20px 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   position: relative;
 }
 
-/* line 119, assets/styles/layouts/_front-page.scss */
+/* line 180, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info:not(.casino-links):not(.casino-badge):not(.casino-payment-gateways)::before,
 .home .primary-container #casinos-block .casino-list .casino-row .casino-secondary-info:not(.casino-links):not(.casino-badge):not(.casino-payment-gateways)::before,
@@ -20464,13 +20716,13 @@ body img {
   margin: auto;
 }
 
-/* line 134, assets/styles/layouts/_front-page.scss */
+/* line 195, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info {
   max-width: 184px;
 }
 
-/* line 137, assets/styles/layouts/_front-page.scss */
+/* line 198, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info .casino-name-wrapper {
   display: -webkit-box;
@@ -20482,7 +20734,7 @@ body img {
   line-height: 28px;
 }
 
-/* line 142, assets/styles/layouts/_front-page.scss */
+/* line 203, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info .casino-name-wrapper .casino-name {
   margin: 0 6px 0 0;
@@ -20492,7 +20744,7 @@ body img {
   font-size: 24px;
 }
 
-/* line 150, assets/styles/layouts/_front-page.scss */
+/* line 211, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info .casino-name-wrapper .betting-types-wrapper {
   display: -webkit-box;
@@ -20500,13 +20752,13 @@ body img {
   display: flex;
 }
 
-/* line 154, assets/styles/layouts/_front-page.scss */
+/* line 215, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info .casino-name-wrapper .betting-types-wrapper .betting-icon:not(:last-child) {
   margin: 0 6px 0 0;
 }
 
-/* line 161, assets/styles/layouts/_front-page.scss */
+/* line 222, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info .casino-rating-wrapper {
   display: -webkit-box;
@@ -20517,7 +20769,7 @@ body img {
           align-items: center;
 }
 
-/* line 165, assets/styles/layouts/_front-page.scss */
+/* line 226, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info .casino-rating-wrapper .badge {
   background-image: url("/wp-content/uploads/2021/07/award.svg");
@@ -20529,20 +20781,20 @@ body img {
   margin: 0 8px 0 0;
 }
 
-/* line 174, assets/styles/layouts/_front-page.scss */
+/* line 235, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info .casino-rating-wrapper .badge.grey {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
 
-/* line 179, assets/styles/layouts/_front-page.scss */
+/* line 240, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info .casino-rating-wrapper .casino-rating {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-/* line 184, assets/styles/layouts/_front-page.scss */
+/* line 245, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info .casino-compare-wrapper {
   display: -webkit-box;
@@ -20555,7 +20807,7 @@ body img {
   line-height: 24px;
 }
 
-/* line 190, assets/styles/layouts/_front-page.scss */
+/* line 251, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info .casino-compare-wrapper .compare-checker {
   text-transform: uppercase;
@@ -20565,14 +20817,14 @@ body img {
   margin: 0;
 }
 
-/* line 197, assets/styles/layouts/_front-page.scss */
+/* line 258, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info .casino-compare-wrapper .compare-checker-text {
   position: relative;
   padding: 0 0 0 24px;
 }
 
-/* line 201, assets/styles/layouts/_front-page.scss */
+/* line 262, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info .casino-compare-wrapper .compare-checker-text::before {
   content: '';
@@ -20588,7 +20840,7 @@ body img {
   margin: auto;
 }
 
-/* line 215, assets/styles/layouts/_front-page.scss */
+/* line 276, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info .casino-compare-wrapper .compare-checker-text::after {
   content: '';
@@ -20605,7 +20857,7 @@ body img {
   margin: auto;
 }
 
-/* line 231, assets/styles/layouts/_front-page.scss */
+/* line 292, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info .casino-compare-wrapper .compare-checker-input {
   opacity: 0;
@@ -20618,32 +20870,32 @@ body img {
   z-index: 1;
 }
 
-/* line 242, assets/styles/layouts/_front-page.scss */
+/* line 303, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info .casino-compare-wrapper .compare-checker-input:checked + .compare-checker-text {
   color: #17c37b;
 }
 
-/* line 245, assets/styles/layouts/_front-page.scss */
+/* line 306, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info .casino-compare-wrapper .compare-checker-input:checked + .compare-checker-text::before {
   background-color: #17c37b;
 }
 
-/* line 254, assets/styles/layouts/_front-page.scss */
+/* line 315, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info .casino-rating-wrapper,
 .home .primary-container #casinos-block .casino-list .casino-row .casino-primary-info .casino-compare-wrapper {
   margin: 12px 0 0;
 }
 
-/* line 260, assets/styles/layouts/_front-page.scss */
+/* line 321, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-secondary-info {
   max-width: 251px;
 }
 
-/* line 263, assets/styles/layouts/_front-page.scss */
+/* line 324, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-secondary-info .info-list {
   list-style-type: none;
@@ -20651,7 +20903,7 @@ body img {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-/* line 268, assets/styles/layouts/_front-page.scss */
+/* line 329, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-secondary-info .info-list-item {
   position: relative;
@@ -20663,13 +20915,13 @@ body img {
           align-items: center;
 }
 
-/* line 273, assets/styles/layouts/_front-page.scss */
+/* line 334, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-secondary-info .info-list-item:not(:first-child) {
   margin: 12px 0 0;
 }
 
-/* line 277, assets/styles/layouts/_front-page.scss */
+/* line 338, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-secondary-info .info-list-item::before {
   content: '';
@@ -20683,14 +20935,14 @@ body img {
   background-size: cover;
 }
 
-/* line 292, assets/styles/layouts/_front-page.scss */
+/* line 353, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-payment-gateways {
   max-width: 195px;
   position: relative;
 }
 
-/* line 296, assets/styles/layouts/_front-page.scss */
+/* line 357, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-payment-gateways-header {
   font-family: 'Roboto Condensed', sans-serif;
@@ -20699,7 +20951,7 @@ body img {
   margin: 0 0 8px;
 }
 
-/* line 303, assets/styles/layouts/_front-page.scss */
+/* line 364, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-payment-gateways-list {
   padding: 0;
@@ -20714,21 +20966,21 @@ body img {
       flex-wrap: wrap;
 }
 
-/* line 310, assets/styles/layouts/_front-page.scss */
+/* line 371, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-payment-gateways-list .payment-gateway {
   margin: 0 8px 14px 0;
   cursor: default;
 }
 
-/* line 314, assets/styles/layouts/_front-page.scss */
+/* line 375, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-payment-gateways-list .payment-gateway:not(.leftover-gateways) {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
 
-/* line 318, assets/styles/layouts/_front-page.scss */
+/* line 379, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-payment-gateways-list .payment-gateway.leftover-gateways {
   background-color: #f2f2f3;
@@ -20739,7 +20991,7 @@ body img {
   font-size: 14px;
 }
 
-/* line 326, assets/styles/layouts/_front-page.scss */
+/* line 387, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-payment-gateways-list .payment-gateway.leftover-gateways .payment-gateways-leftover {
   position: absolute;
@@ -20758,20 +21010,20 @@ body img {
   z-index: 1;
 }
 
-/* line 340, assets/styles/layouts/_front-page.scss */
+/* line 401, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-payment-gateways-list .payment-gateway.leftover-gateways .payment-gateways-leftover .payment-gateway-leftover {
   margin: 0 10px 16px 0;
 }
 
-/* line 345, assets/styles/layouts/_front-page.scss */
+/* line 406, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-payment-gateways-list .payment-gateway.leftover-gateways:hover {
   background-color: #1d2129;
   color: #fff;
 }
 
-/* line 349, assets/styles/layouts/_front-page.scss */
+/* line 410, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-payment-gateways-list .payment-gateway.leftover-gateways:hover .payment-gateways-leftover {
   display: -webkit-box;
@@ -20779,20 +21031,26 @@ body img {
   display: flex;
 }
 
-/* line 358, assets/styles/layouts/_front-page.scss */
+/* line 419, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-badge {
   max-width: 120px;
   margin-left: 0;
 }
 
-/* line 363, assets/styles/layouts/_front-page.scss */
+/* line 423, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #casinos-block .casino-list .casino-row .casino-badge img {
+  width: 100%;
+}
+
+/* line 428, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-links {
   max-width: 120px;
 }
 
-/* line 367, assets/styles/layouts/_front-page.scss */
+/* line 432, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-links .casino-buttons-wrapper .casino-site-button,
 .home .primary-container #casinos-block .casino-list .casino-row .casino-links .casino-buttons-wrapper .casino-review-button {
@@ -20805,7 +21063,7 @@ body img {
   text-decoration: none;
 }
 
-/* line 378, assets/styles/layouts/_front-page.scss */
+/* line 443, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-links .casino-buttons-wrapper .casino-site-button {
   background-color: #17c37b;
@@ -20814,13 +21072,13 @@ body img {
   margin: 0 0 8px;
 }
 
-/* line 384, assets/styles/layouts/_front-page.scss */
+/* line 449, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-links .casino-buttons-wrapper .casino-site-button span {
   position: relative;
 }
 
-/* line 387, assets/styles/layouts/_front-page.scss */
+/* line 452, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-links .casino-buttons-wrapper .casino-site-button span::after {
   content: '';
@@ -20838,14 +21096,541 @@ body img {
   margin: auto;
 }
 
-/* line 404, assets/styles/layouts/_front-page.scss */
+/* line 469, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container #casinos-block .casino-list .casino-row .casino-links .casino-buttons-wrapper .casino-review-button {
   background-color: #f2f2f3;
   color: #1d2129;
 }
 
-/* line 416, assets/styles/layouts/_front-page.scss */
+/* line 478, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #casinos-block .all-casinos-button {
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  text-align: center;
+  padding: 14px 0 13px;
+  width: 100%;
+  display: block;
+  text-decoration: none;
+}
+
+/* line 488, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #casinos-block .all-casinos-button-text {
+  color: #17c37b;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  line-height: 19px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* line 496, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #casinos-block .all-casinos-button-text::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #17c37b;
+  border-right: 2px solid #17c37b;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  right: -12px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* line 514, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #informational-block {
+  position: relative;
+  padding: 120px 0;
+}
+
+/* line 518, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #informational-block .informational-block-image {
+  background-image: url("/wp-content/uploads/2021/07/informational-block-image.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  width: 212px;
+  height: 173px;
+  position: absolute;
+  top: -3%;
+  right: -9%;
+}
+
+/* line 531, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #informational-block .informational-block-wrapper .informational-block-header {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  max-width: 345px;
+  margin: 0 0 46px;
+}
+
+/* line 540, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #informational-block .informational-block-wrapper .informational-sub-blocks {
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 544, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #informational-block .informational-block-wrapper .informational-sub-blocks .informational-sub-block {
+  margin: 0 0 46px;
+}
+
+/* line 547, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #informational-block .informational-block-wrapper .informational-sub-blocks .informational-sub-block:last-child {
+  margin: 0;
+}
+
+/* line 551, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #informational-block .informational-block-wrapper .informational-sub-blocks .informational-sub-block-header {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  line-height: 22px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0 0 0 24px;
+  margin: 0 0 16px;
+}
+
+/* line 560, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #informational-block .informational-block-wrapper .informational-sub-blocks .informational-sub-block-header::before {
+  content: '';
+  display: inline-block;
+  background-image: url("/wp-content/uploads/2021/07/green-filled-checkermark.svg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* line 577, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #informational-block .informational-block-wrapper .informational-sub-blocks .informational-sub-block-content {
+  -webkit-columns: 2;
+     -moz-columns: 2;
+          columns: 2;
+  line-height: 28px;
+}
+
+/* line 586, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #latest-news-block {
+  background-color: #f2f2f3;
+  padding: 120px 0;
+  position: relative;
+}
+
+/* line 591, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #latest-news-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -9999px;
+  right: 0;
+  border-left: 9999px solid #f2f3f2;
+  -webkit-box-shadow: 9999px 0 0 #f2f3f2;
+          box-shadow: 9999px 0 0 #f2f3f2;
+}
+
+/* line 602, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #latest-news-block .latest-news-section-header-wrapper {
+  position: relative;
+  margin: 0 0 60px;
+}
+
+/* line 606, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #latest-news-block .latest-news-section-header-wrapper .latest-news-section-header {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+}
+
+/* line 614, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #latest-news-block .latest-news-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 620, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #latest-news-block .latest-news-list .prev-arrow-button,
+.home .primary-container #latest-news-block .latest-news-list .next-arrow-button {
+  position: absolute;
+  top: -30%;
+  display: inline-block;
+  width: 24px !important;
+  height: 24px;
+}
+
+/* line 629, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #latest-news-block .latest-news-list .prev-arrow-button {
+  background-image: url("/wp-content/uploads/2021/07/arrow-left.svg");
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  right: 6%;
+}
+
+/* line 637, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #latest-news-block .latest-news-list .next-arrow-button {
+  background-image: url("/wp-content/uploads/2021/07/arrow-right-1.svg");
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  right: 3%;
+}
+
+/* line 645, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #latest-news-block .latest-news-list .latest-news {
+  max-width: 358px;
+  margin: 0 30px 30px 0;
+}
+
+/* line 649, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #latest-news-block .latest-news-list .latest-news:not(.slick-slide):nth-child(3n) {
+  margin-right: 0;
+}
+
+/* line 653, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #latest-news-block .latest-news-list .latest-news-img {
+  margin: 0 0 16px;
+}
+
+/* line 656, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #latest-news-block .latest-news-list .latest-news-img .attachment-post-thumbnail {
+  border-radius: 4px;
+}
+
+/* line 662, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #latest-news-block .latest-news-list .latest-news-info-date-publish {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 14px;
+  line-height: 16.41px;
+  color: #5d6066;
+  margin: 0 0 10px;
+}
+
+/* line 670, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #latest-news-block .latest-news-list .latest-news-info-header {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* line 678, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #latest-news-block .latest-news-list .latest-news-link-wrapper {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  line-height: 18.75px;
+  text-transform: uppercase;
+  margin: 12px 0 0;
+}
+
+/* line 685, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #latest-news-block .latest-news-list .latest-news-link-wrapper .latest-news-link {
+  color: #5d6066;
+  position: relative;
+  text-decoration: none;
+}
+
+/* line 690, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #latest-news-block .latest-news-list .latest-news-link-wrapper .latest-news-link::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #5d6066;
+  border-right: 2px solid #5d6066;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  right: -12px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* line 710, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #call-to-action-block {
+  padding: 120px 0;
+}
+
+/* line 715, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #call-to-action-block .call-to-action-wrapper .call-to-action-header h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52px;
+  margin: 0 0 24px;
+}
+
+/* line 724, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #call-to-action-block .call-to-action-wrapper .call-to-action-sub-header {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  max-width: 575px;
+  margin: 0 0 40px;
+}
+
+/* line 732, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #call-to-action-block .call-to-action-wrapper .call-to-action-list {
+  list-style-type: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 737, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #call-to-action-block .call-to-action-wrapper .call-to-action-list .call-to-action-list-item {
+  margin: 0 30px 0 0;
+  max-width: 32%;
+  width: 100%;
+}
+
+/* line 742, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #call-to-action-block .call-to-action-wrapper .call-to-action-list .call-to-action-list-item:nth-child(3n) {
+  margin: 0;
+}
+
+/* line 746, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #call-to-action-block .call-to-action-wrapper .call-to-action-list .call-to-action-list-item .call-to-action-list-item-img {
+  margin: 0 0 16px;
+}
+
+/* line 749, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #call-to-action-block .call-to-action-wrapper .call-to-action-list .call-to-action-list-item .call-to-action-list-item-img img {
+  margin: 0;
+}
+
+/* line 754, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #call-to-action-block .call-to-action-wrapper .call-to-action-list .call-to-action-list-item .call-to-action-list-item-link {
+  margin: 20px 0 0;
+}
+
+/* line 757, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #call-to-action-block .call-to-action-wrapper .call-to-action-list .call-to-action-list-item .call-to-action-list-item-link .call-to-action-list-link {
+  color: #17c37b;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  line-height: 19px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* line 765, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #call-to-action-block .call-to-action-wrapper .call-to-action-list .call-to-action-list-item .call-to-action-list-item-link .call-to-action-list-link::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #17c37b;
+  border-right: 2px solid #17c37b;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  right: -12px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* line 786, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #informational-block-bottom {
+  background-color: #f2f3f2;
+  padding: 120px 0;
+  position: relative;
+}
+
+/* line 791, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #informational-block-bottom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -9999px;
+  right: 0;
+  border-left: 9999px solid #f2f3f2;
+  -webkit-box-shadow: 9999px 0 0 #f2f3f2;
+          box-shadow: 9999px 0 0 #f2f3f2;
+}
+
+/* line 803, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #informational-block-bottom .informational-block-bottom-wrapper .informational-block-bottom-header {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52px;
+  margin: 0 0 24px 0;
+}
+
+/* line 811, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #informational-block-bottom .informational-block-bottom-wrapper .informational-block-bottom-sub-header {
+  margin: 0 0 54px;
+}
+
+/* line 815, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #informational-block-bottom .informational-block-bottom-wrapper .informational-block-bottom-sub-block {
+  margin-bottom: 48px;
+}
+
+/* line 819, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #informational-block-bottom .informational-block-bottom-wrapper .informational-block-bottom-sub-block-link-wrapper .informational-sub-block-link {
+  color: #17c37b;
+  font-weight: 700;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* line 831, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #faq-block {
+  padding: 120px 287px;
+}
+
+/* line 834, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #faq-block .faq-block-header-wrapper {
+  text-align: center;
+}
+
+/* line 837, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #faq-block .faq-block-header-wrapper .faq-block-header {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  color: #000;
+  margin: 0 0 48px;
+}
+
+/* line 848, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #faq-block .faq-block-wrapper .faq-block-accordion {
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 852, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #faq-block .faq-block-wrapper .faq-block-accordion .faq-block-card {
+  border-bottom: 1px solid #bebec7;
+  margin: 0 0 16px;
+}
+
+/* line 856, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #faq-block .faq-block-wrapper .faq-block-accordion .faq-block-card .faq-block-card-item-header {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: #1d2129;
+  padding: 0 0 16px;
+  text-decoration: none;
+  width: 100%;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+
+/* line 872, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #faq-block .faq-block-wrapper .faq-block-accordion .faq-block-card .faq-block-card-item-header[aria-expanded="false"] .plus-sign::after {
+  top: 0;
+  -webkit-transition: top 0.5s;
+  transition: top 0.5s;
+}
+
+/* line 881, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #faq-block .faq-block-wrapper .faq-block-accordion .faq-block-card .faq-block-card-item-header[aria-expanded="true"] .plus-sign::after {
+  top: -165%;
+  -webkit-transition: top 0.5s;
+  transition: top 0.5s;
+}
+
+/* line 889, assets/styles/layouts/_front-page.scss */
+
+.home .primary-container #faq-block .faq-block-wrapper .faq-block-accordion .faq-block-card .card-body {
+  padding: 0;
+}
+
+/* line 899, assets/styles/layouts/_front-page.scss */
 
 .home .primary-container {
   max-width: 1164px;
@@ -20857,6 +21642,146 @@ body img {
  * Prefix your imports with `~` to grab from node_modules/
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
+
+/* Slider */
+
+/* line 3, node_modules/slick-carousel/slick/slick.scss */
+
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 17, node_modules/slick-carousel/slick/slick.scss */
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 24, node_modules/slick-carousel/slick/slick.scss */
+
+.slick-list:focus {
+  outline: none;
+}
+
+/* line 28, node_modules/slick-carousel/slick/slick.scss */
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 33, node_modules/slick-carousel/slick/slick.scss */
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 42, node_modules/slick-carousel/slick/slick.scss */
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 50, node_modules/slick-carousel/slick/slick.scss */
+
+.slick-track:before,
+.slick-track:after {
+  content: "";
+  display: table;
+}
+
+/* line 56, node_modules/slick-carousel/slick/slick.scss */
+
+.slick-track:after {
+  clear: both;
+}
+
+/* line 60, node_modules/slick-carousel/slick/slick.scss */
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+/* line 64, node_modules/slick-carousel/slick/slick.scss */
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+/* line 68, node_modules/slick-carousel/slick/slick.scss */
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+/* line 71, node_modules/slick-carousel/slick/slick.scss */
+
+.slick-slide img {
+  display: block;
+}
+
+/* line 74, node_modules/slick-carousel/slick/slick.scss */
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+/* line 80, node_modules/slick-carousel/slick/slick.scss */
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+/* line 84, node_modules/slick-carousel/slick/slick.scss */
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+/* line 88, node_modules/slick-carousel/slick/slick.scss */
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+/* line 92, node_modules/slick-carousel/slick/slick.scss */
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+/* line 98, node_modules/slick-carousel/slick/slick.scss */
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
 
 
 /*# sourceMappingURL=main.css.map*/

@@ -1,0 +1,36 @@
+.footer {
+  background: linear-gradient(180deg, #09101f 0%, #012325 103.08%);
+  color: #fff;
+
+  &__container {
+    @include make-container();
+    @include make-container-max-widths();
+
+    background-image: url('/wp-content/uploads/2021/07/footer-background-image.svg');
+    background-repeat: no-repeat;
+    background-position: 38% 60%;
+    padding-top: 80px;
+    padding-bottom: 42px;
+  }
+
+  &__row {
+    @include make-row();
+
+    .footer-left {
+      .bottom-text {
+        max-width: 480px;
+      }
+    }
+  }
+
+  &__brand {
+    @include make-col(3);
+
+    margin: 0 0 16px;
+    display: inline-block;
+  }
+
+  &__nav {
+    @include make-col(9);
+  }
+}
