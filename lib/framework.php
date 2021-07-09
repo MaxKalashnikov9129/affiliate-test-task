@@ -17,6 +17,7 @@
 if ( ! isset( $content_width ) ) {
 	$content_width = 1140;
 }
+
 /**
  * cda_navwalker class
  * Menu navigation walker
@@ -28,28 +29,31 @@ class cda_Navwalker extends Walker_Nav_Menu {
 	/**
 	 * Walker::start_lvl()
 	 *
-	 * @see Walker::start_lvl()
+	 * @param string $output Passed by reference. Used to append additional content.
+	 * @param int $depth Depth of page. Used for padding.
+	 * @param array $args args
+	 *
 	 * @since 3.0.0
 	 *
-	 * @param string $output Passed by reference. Used to append additional content.
-	 * @param int    $depth Depth of page. Used for padding.
-	 * @param array  $args args
+	 * @see Walker::start_lvl()
 	 */
 	public function start_lvl( &$output, $depth = 0, $args = array() ) {
-		$indent  = str_repeat( "\t", $depth );
+		$indent = str_repeat( "\t", $depth );
 		$output .= "\n$indent<ul role=\"menu\" class=\" dropdown-menu\">\n";
 	}
+
 	/**
 	 * Walker::start_el()
 	 *
-	 * @see Walker::start_el()
-	 * @since 3.0.0
-	 *
 	 * @param string $output Passed by reference. Used to append additional content.
 	 * @param object $item Menu item data object.
-	 * @param int    $depth Depth of menu item. Used for padding.
+	 * @param int $depth Depth of menu item. Used for padding.
 	 * @param object $args args
-	 * @param int    $id Menu item ID.
+	 * @param int $id Menu item ID.
+	 *
+	 * @since 3.0.0
+	 *
+	 * @see Walker::start_el()
 	 */
 	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
@@ -83,7 +87,7 @@ class cda_Navwalker extends Walker_Nav_Menu {
 			$class_names    = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 			$id             = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args );
 			$id             = $id ? ' id="' . esc_attr( $id ) . '"' : '';
-			$output        .= $indent . '<li' . $id . $value . $class_names . '>';
+			$output         .= $indent . '<li' . $id . $value . $class_names . '>';
 			$atts           = array();
 			$atts['title']  = ! empty( $item->title ) ? $item->title : '';
 			$atts['target'] = ! empty( $item->target ) ? $item->target : '';
@@ -101,7 +105,7 @@ class cda_Navwalker extends Walker_Nav_Menu {
 			$attributes = '';
 			foreach ( $atts as $attr => $value ) {
 				if ( ! empty( $value ) ) {
-					$value       = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
+					$value      = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
 					$attributes .= ' ' . $attr . '="' . $value . '"';
 				}
 			}
@@ -118,11 +122,18 @@ class cda_Navwalker extends Walker_Nav_Menu {
 			if ( ! empty( $item->attr_title ) ) {
 				$item_output .= '<a' . $attributes . '><span class="glyphicon ' . esc_attr( $item->attr_title ) . '"></span>&nbsp;';
 			} else {
-				$item_icon_id = get_field('nav_item_icon', $item->ID);
+				$item_icons = get_field( 'primary_navigation_item_icon_group', $item->ID );
 
-				$item_icon = '';
-				if( !empty($item_icon_id) ) {
-					$item_icon = '<span class="nav-item-icon">' . wp_get_attachment_image( $item_icon_id, 'full') . ' </span>';
+				$item_icon_id = '';
+				if ( is_front_page() ) {
+					$item_icon_id = $item_icons['navigation_item_icon_front_page'];
+				} else {
+					$item_icon_id = $item_icons['navigation_item_icon'];
+				}
+
+
+				if ( ! empty( $item_icon_id ) ) {
+					$item_icon = '<span class="nav-item-icon">' . wp_get_attachment_image( $item_icon_id, 'full' ) . ' </span>';
 				}
 
 				$item_output .= $item_icon . '<a' . $attributes . '>';
@@ -133,6 +144,7 @@ class cda_Navwalker extends Walker_Nav_Menu {
 			$output      .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 		}
 	}
+
 	/**
 	 * Traverse elements to create list from elements.
 	 *
@@ -142,16 +154,17 @@ class cda_Navwalker extends Walker_Nav_Menu {
 	 *
 	 * This method shouldn't be called directly, use the walk() method instead.
 	 *
-	 * @see Walker::start_el()
+	 * @param object $element Data object
+	 * @param array $children_elements List of elements to continue traversing.
+	 * @param int $max_depth Max depth to traverse.
+	 * @param int $depth Depth of current element.
+	 * @param array $args args
+	 * @param string $output Passed by reference. Used to append additional content.
+	 *
+	 * @return null Null on failure with no changes to parameters.
 	 * @since 2.5.0
 	 *
-	 * @param object $element Data object
-	 * @param array  $children_elements List of elements to continue traversing.
-	 * @param int    $max_depth Max depth to traverse.
-	 * @param int    $depth Depth of current element.
-	 * @param array  $args args
-	 * @param string $output Passed by reference. Used to append additional content.
-	 * @return null Null on failure with no changes to parameters.
+	 * @see Walker::start_el()
 	 */
 	public function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ) {
 		if ( ! $element ) {
@@ -164,6 +177,7 @@ class cda_Navwalker extends Walker_Nav_Menu {
 		}
 		parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
 	}
+
 	/**
 	 * Menu Fallback
 	 * =============
@@ -214,22 +228,23 @@ class cda_Navwalker extends Walker_Nav_Menu {
  * source: http://www.ordinarycoder.com/paginate_links-class-ul-li-beetroot/
  *
  * @param boolean $echo echo
+ *
  * @return string
  */
 function cda_pagination( $echo = true ) {
 	global $wp_query;
 	$big   = 999999999; // need an unlikely integer
 	$pages = paginate_links(
-		array(
-			'base'         => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-			'format'       => '?paged=%#%',
-			'current'      => max( 1, get_query_var( 'paged' ) ),
-			'total'        => $wp_query->max_num_pages,
-			'type'         => 'array',
-			'prev_next'    => true,
-			'prev_text'    => __( '&laquo; Prev' ),
-			'next_text'    => __( 'Next &raquo;' ),
-		)
+			array(
+					'base'      => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+					'format'    => '?paged=%#%',
+					'current'   => max( 1, get_query_var( 'paged' ) ),
+					'total'     => $wp_query->max_num_pages,
+					'type'      => 'array',
+					'prev_next' => true,
+					'prev_text' => __( '&laquo; Prev' ),
+					'next_text' => __( 'Next &raquo;' ),
+			)
 	);
 	if ( is_array( $pages ) ) {
 		$paged      = ( get_query_var( 'paged' ) === 0 ) ? 1 : get_query_var( 'paged' );
@@ -246,6 +261,7 @@ function cda_pagination( $echo = true ) {
 		}
 	}
 }
+
 /**
  * 4 - Comments tree
  * beetroot Comments Tree
@@ -258,24 +274,26 @@ if ( ! class_exists( 'cda_Comments' ) ) :
 		/**
 		 * tree_type
 		 *
-		 * @var string $tree_type  tree_type
+		 * @var string $tree_type tree_type
 		 */
 		public $tree_type = 'comment';
 
 		/**
 		 * db_fields
 		 *
-		 * @var array $db_fields  tree_type
+		 * @var array $db_fields tree_type
 		 */
 		public $db_fields = array(
-			'parent' => 'comment_parent',
-			'id'     => 'comment_ID',
+				'parent' => 'comment_parent',
+				'id'     => 'comment_ID',
 		);
+
 		/** CONSTRUCTOR
 		 * You'll have to use this if you plan to get to the top of the comments list, as
 		 * start_lvl() only goes as high as 1 deep nested comments */
 		public function __construct() { ?>
-			<h3><?php comments_number( __( 'No Responses to', 'wp_dev' ), __( 'One Response to', 'wp_dev' ), __( '% Responses to', 'wp_dev' ) ); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
+			<h3><?php comments_number( __( 'No Responses to', 'wp_dev' ), __( 'One Response to', 'wp_dev' ), __( '% Responses to', 'wp_dev' ) ); ?>
+				&#8220;<?php the_title(); ?>&#8221;</h3>
 			<ol class="comment-list">
 			<?php
 		}
@@ -283,55 +301,58 @@ if ( ! class_exists( 'cda_Comments' ) ) :
 		/**
 		 * Starts the list before the CHILD elements are added.
 		 *
-		 * @param string  $output output
+		 * @param string $output output
 		 * @param integer $depth depth
-		 * @param array   $args args
+		 * @param array $args args
+		 *
 		 * @return void
 		 */
-		public function start_lvl( &$output, $depth = 0, $args = array() ) {
-			$GLOBALS['comment_depth'] = $depth + 1;
-			?>
+	public function start_lvl( &$output, $depth = 0, $args = array() ) {
+		$GLOBALS['comment_depth'] = $depth + 1;
+		?>
 		<ul class="children">
-			<?php
-		}
+		<?php
+	}
 
 		/**
 		 * Ends the children list of after the elements are added.
 		 *
-		 * @param string  $output output
+		 * @param string $output output
 		 * @param integer $depth depth
-		 * @param array   $args args
+		 * @param array $args args
+		 *
 		 * @return void
 		 */
-		public function end_lvl( &$output, $depth = 0, $args = array() ) {
-			$GLOBALS['comment_depth'] = $depth + 1;
-			?>
+	public function end_lvl( &$output, $depth = 0, $args = array() ) {
+		$GLOBALS['comment_depth'] = $depth + 1;
+		?>
 		</ul><!-- /.children -->
-			<?php
-		}
+		<?php
+	}
 
 		/**
 		 * START_EL
 		 *
-		 * @param string  $output output
-		 * @param mixed   $comment comment
+		 * @param string $output output
+		 * @param mixed $comment comment
 		 * @param integer $depth depth
-		 * @param array   $args args
+		 * @param array $args args
 		 * @param integer $id id
+		 *
 		 * @return void
 		 */
-		public function start_el( &$output, $comment, $depth = 0, $args = array(), $id = 0 ) {
-			$depth++;
-			$GLOBALS['comment_depth'] = $depth;
-			$GLOBALS['comment']       = $comment;
-			$parent_class             = ( empty( $args['has_children'] ) ? '' : 'parent' );
-			?>
+	public function start_el( &$output, $comment, $depth = 0, $args = array(), $id = 0 ) {
+		$depth ++;
+		$GLOBALS['comment_depth'] = $depth;
+		$GLOBALS['comment']       = $comment;
+		$parent_class             = ( empty( $args['has_children'] ) ? '' : 'parent' );
+		?>
 		<li <?php comment_class( $parent_class ); ?> id="comment-<?php comment_ID(); ?>">
 		<article id="comment-body-<?php comment_ID(); ?>" class="comment-body">
 			<header class="comment-author">
-					<?php echo get_avatar( $comment, $args['avatar_size'] ); ?>
+				<?php echo get_avatar( $comment, $args['avatar_size'] ); ?>
 				<div class="author-meta vcard author">
-						<?php printf( '<cite class="fn">%s</cite>', get_comment_author_link() ); ?>
+					<?php printf( '<cite class="fn">%s</cite>', get_comment_author_link() ); ?>
 					<time datetime="<?php echo comment_date( 'c' ); ?>">
 						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 							<?php printf( '%1$s', get_comment_date(), get_comment_time() ); ?>
@@ -340,7 +361,7 @@ if ( ! class_exists( 'cda_Comments' ) ) :
 				</div><!-- /.comment-author -->
 			</header>
 			<section id="comment-content-<?php comment_ID(); ?>" class="comment">
-					<?php if ( ! $comment->comment_approved ) : ?>
+				<?php if ( ! $comment->comment_approved ) : ?>
 					<div class="notice">
 						<p class="bottom"><?php _e( 'Your comment is awaiting moderation.', 'wp_dev' ); ?></p>
 					</div>
@@ -348,35 +369,37 @@ if ( ! class_exists( 'cda_Comments' ) ) :
 				<?php endif; ?>
 			</section><!-- /.comment-content -->
 			<div class="comment-meta comment-meta-data hide">
-				<a href="<?php echo htmlspecialchars( get_comment_link( get_comment_ID() ) ); ?>"><?php comment_date(); ?> at <?php comment_time(); ?></a> <?php edit_comment_link( '(Edit)' ); ?>
+				<a href="<?php echo htmlspecialchars( get_comment_link( get_comment_ID() ) ); ?>"><?php comment_date(); ?>
+					at <?php comment_time(); ?></a> <?php edit_comment_link( '(Edit)' ); ?>
 			</div><!-- /.comment-meta -->
 			<div class="reply">
-					<?php
-					$reply_args = array(
+				<?php
+				$reply_args = array(
 						'depth'     => $depth,
 						'max_depth' => $args['max_depth'],
-					);
-					comment_reply_link( array_merge( $args, $reply_args ) );
-					?>
+				);
+				comment_reply_link( array_merge( $args, $reply_args ) );
+				?>
 			</div><!-- /.reply -->
 		</article><!-- /.comment-body -->
-			<?php
-		}
+		<?php
+	}
 
 		/**
 		 * end_el
 		 *
-		 * @param string  $output output
-		 * @param mixed   $comment comment
+		 * @param string $output output
+		 * @param mixed $comment comment
 		 * @param integer $depth depth
-		 * @param array   $args args
+		 * @param array $args args
+		 *
 		 * @return void
 		 */
-		public function end_el( & $output, $comment, $depth = 0, $args = array() ) {
-			?>
+	public function end_el( &$output, $comment, $depth = 0, $args = array() ) {
+		?>
 		</li><!-- /#comment-' . get_comment_ID() . ' -->
-			<?php
-		}
+		<?php
+	}
 		/** DESTRUCTOR */
 		public function __destruct() {
 			?>
