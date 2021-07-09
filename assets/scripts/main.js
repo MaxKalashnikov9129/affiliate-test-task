@@ -1,6 +1,6 @@
 // import external dependencies
 import "jquery"
-import "./modules/front-page.js"
+import "./pages/front-page.js"
 
 // Import everything from autoload
 import "./autoload/**/*"

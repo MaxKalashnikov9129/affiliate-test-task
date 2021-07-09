@@ -8,7 +8,7 @@
 
     background-image: url('/wp-content/uploads/2021/07/footer-background-image.svg');
     background-repeat: no-repeat;
-    background-position: 38% 60%;
+    background-position: 37% 30%;
     padding-top: 80px;
     padding-bottom: 42px;
   }
@@ -19,6 +19,61 @@
     .footer-left {
       .bottom-text {
         max-width: 480px;
+      }
+    }
+
+    .footer-right {
+      .nav-footer {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .footer-menu-wrapper {
+        .footer-menu-header {
+          text-transform: uppercase;
+          font-family: 'Roboto Condensed', sans-serif;
+          font-weight: 700;
+          margin: 0 0 24px;
+        }
+
+        .menu {
+          .menu-item {
+            display: flex;
+            align-items: center;
+            margin: 0 0 29px;
+
+            .nav-item-icon {
+              margin: 0 10px 0 0;
+            }
+
+            a {
+              color: #fff;
+              text-transform: uppercase;
+              font-family: 'Roboto Condensed', sans-serif;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-bottom {
+      text-align: right;
+      margin-top: 41px;
+
+      #documents-footer-menu {
+        display: flex;
+        justify-content: flex-end;
+
+        .menu-item {
+          &:not(:last-child) {
+            margin: 0 16px 0 0;
+          }
+
+          a {
+            color: #fff;
+          }
+        }
       }
     }
   }

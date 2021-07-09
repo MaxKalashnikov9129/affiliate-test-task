@@ -1,0 +1,279 @@
+.single-casinos {
+  .content-area {
+    .single-casino-page-content {
+      display: flex;
+      margin: 20px 0 0;
+
+      .casino-statuses {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0;
+        margin: 0;
+
+        .casino-status {
+          border-bottom-right-radius: 0;
+          border-top-left-radius: 0;
+        }
+      }
+
+      .casino-info-block,
+      .casino-review-block {
+        width: 100%;
+      }
+
+      .casino-info-block {
+        max-width: 269px;
+        position: relative;
+
+        .casino-info {
+          background-color: #fff;
+          padding: 32px;
+          border-radius: 4px;
+
+          .casino-logo {
+            margin: 0 0 32px;
+          }
+
+          .casino-site-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .arrow-icon {
+              margin: 0 0 0 12px;
+            }
+          }
+        }
+      }
+
+      .casino-review-block {
+        max-width: 835px;
+        background-color: #fff;
+        border-radius: 4px;
+        padding: 15px 45px 113px;
+        margin: 0 0 0 30px;
+
+        .casino-review-block-intro,
+        .casino-review-block-info-chart {
+          margin: 0 0 60px;
+        }
+
+        .casino-review-block-intro {
+          padding: 34px 32px;
+          border-radius: 4px;
+          background-size: 100%;
+          background-position: center center;
+          background-repeat: no-repeat;
+          color: #fff;
+          display: flex;
+          justify-content: space-between;
+
+          .casino-review-block-intro-left {
+            max-width: 376px;
+            margin: 0 31px 0 0;
+
+            &-review-date {
+              font-family: 'Roboto', sans-serif;
+              font-size: 12px;
+              line-height: 20px;
+              margin: 0 0 8px;
+            }
+
+            &-review-header {
+              position: relative;
+              z-index: 1;
+
+              .review-header {
+                font-family: 'Roboto Condensed', sans-serif;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 36px;
+                margin: 0;
+              }
+            }
+
+            .casino-links {
+              display: flex;
+              align-items: center;
+              position: relative;
+              top: -18px;
+              z-index: 0;
+
+              .casino-buttons-wrapper {
+                .casino-site-button {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  box-shadow: 0 14px 40px rgba(12, 134, 83, 0.6);
+
+                  .arrow-icon {
+                    margin: 0 0 0 12px;
+                  }
+                }
+              }
+
+              .age-disclaimer {
+                margin: 0 0 0 15px;
+              }
+            }
+          }
+
+          .casino-review-block-intro-right {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 4px;
+            padding: 25px 4px 8px;
+            position: relative;
+
+            .casino-rating-wrapper {
+              padding: 4px 23px 4px 28px;
+              background-color: #fff;
+              border-radius: 4px;
+              margin: 45px 0 12px;
+              display: flex;
+              align-items: center;
+
+              .casino-rating {
+                color: #000;
+
+                .current-rating {
+                  font-weight: 700;
+                }
+              }
+
+              .info-icon {
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                background-image: url('/wp-content/uploads/2021/07/info.svg');
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                margin: 0 0 0 5px;
+              }
+            }
+
+            .casino-compare-wrapper {
+              justify-content: center;
+              color: #1d2129;
+
+              .compare-checker-text {
+                text-transform: capitalize;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+
+        .prev-arrow-button,
+        .next-arrow-button {
+          top: 0;
+        }
+
+        .prev-arrow-button {
+          right: 8%;
+        }
+
+        .next-arrow-button {
+          right: 1%;
+        }
+
+        .casino-review-info-chart {
+          font-family: 'Roboto', sans-serif;
+          margin: 0 0 60px;
+
+          &-list {
+            padding: 0;
+            list-style-type: none;
+
+            &-item {
+              padding: 11px 0 11px 1px;
+              border-bottom: 1px solid #000;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              &-name,
+              &-content {
+                display: flex;
+                align-items: center;
+              }
+
+              &-name {
+                text-transform: uppercase;
+                font-family: 'Roboto Condensed', sans-serif;
+                font-weight: 700;
+                font-size: 14px;
+
+                .chart-list-item-name-text {
+                  margin: 0 0 0 13px;
+                }
+              }
+
+              &-content {
+                .chart-list-item-content-link {
+                  font-family: 'Roboto', sans-serif;
+                  font-weight: bold;
+                  font-size: 16px;
+                  color: #17c37b;
+                  display: flex;
+
+                  .link-icon {
+                    margin: 0 0 0 4px;
+                  }
+
+                  &:not(:last-child) {
+                    margin: 0 13px 0 0;
+                  }
+                }
+
+                .casino-payment-gateways {
+                  &-list {
+                    .payment-gateway {
+                      margin-bottom: 0;
+
+                      &.leftover-gateways {
+                        background-color: #f2f2f3;
+                        color: #000;
+                        padding: 1px 12px;
+                        border-radius: 30px;
+                        font-family: 'Roboto Condensed', sans-serif;
+                        font-size: 14px;
+
+                        .payment-gateways-leftover {
+                          left: unset;
+                          right: 0;
+                          top: 110%;
+                          width: 60%;
+
+                          .payment-gateway-leftover {
+                            margin: 0 10px 16px 0;
+                          }
+                        }
+
+                        &:hover {
+                          background-color: #1d2129;
+                          color: #fff;
+
+                          .payment-gateways-leftover {
+                            display: flex;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &-content {
+          h2 {
+            margin: 0 0 40px;
+          }
+        }
+      }
+    }
+  }
+}
