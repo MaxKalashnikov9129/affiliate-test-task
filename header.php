@@ -20,6 +20,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php if(is_front_page()) : ?>
+	<div class="background-image"></div>
+<?php endif;?>
 <header class="header">
 	<div class="header__container">
 		<div class="header__row">
