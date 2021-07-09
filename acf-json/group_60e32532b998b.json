@@ -322,7 +322,7 @@
                             "key": "field_60e5b1b6cb3e8",
                             "label": "Call to action block link",
                             "name": "call_to_action_block_link",
-                            "type": "page_link",
+                            "type": "link",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -331,34 +331,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "post_type": [
-                                "post",
-                                "page",
-                                "casinos"
-                            ],
-                            "taxonomy": "",
-                            "allow_null": 0,
-                            "allow_archives": 1,
-                            "multiple": 0
-                        },
-                        {
-                            "key": "field_60e5b734f07c3",
-                            "label": "Call to action block link text",
-                            "name": "call_to_action_block_link_text",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "20",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            "return_format": "array"
                         }
                     ]
                 }
@@ -602,5 +575,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625680810
+    "modified": 1625782029
 }
