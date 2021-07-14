@@ -29,6 +29,7 @@ $theme_includes = [
 	'/lib/acf_blocks_loader.php',              // ACF Blocks Loader
 	'/lib/wp_dashboard_customizer.php',        // WP Dashboard customizer
 	'/lib/acf_customs.php',                    // ACF functionality not native for starter-theme
+	'/lib/ajax_actions.php',                   // Collection of different ajax-actions to perform on request
 
 ];
 

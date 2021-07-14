@@ -20530,6 +20530,13 @@ a.text-dark:focus {
 
 /* line 58, assets/styles/layouts/_front-page.scss */
 
+.home #casinos-block .pre-list-block .sort-controls-date,
+.home #casinos-block .pre-list-block .sort-controls-rating {
+  cursor: pointer;
+}
+
+/* line 63, assets/styles/layouts/_front-page.scss */
+
 .home #casinos-block .pre-list-block .sort-controls-label,
 .home #casinos-block .pre-list-block .sort-controls-date,
 .home #casinos-block .pre-list-block .sort-controls-rating {
@@ -20541,7 +20548,7 @@ a.text-dark:focus {
           align-items: center;
 }
 
-/* line 64, assets/styles/layouts/_front-page.scss */
+/* line 69, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .pre-list-block .sort-controls-label-icon,
 .home #casinos-block .pre-list-block .sort-controls-date-icon,
@@ -20549,19 +20556,19 @@ a.text-dark:focus {
   margin: 0 8px 0 0;
 }
 
-/* line 69, assets/styles/layouts/_front-page.scss */
+/* line 74, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .pre-list-block .sort-controls-label {
   margin: 0 23px 0 0;
 }
 
-/* line 73, assets/styles/layouts/_front-page.scss */
+/* line 78, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .pre-list-block .sort-controls-date {
   margin: 0 28px 0 0;
 }
 
-/* line 79, assets/styles/layouts/_front-page.scss */
+/* line 84, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list {
   list-style-type: none;
@@ -20569,7 +20576,7 @@ a.text-dark:focus {
   margin: 32px 0 0 0;
 }
 
-/* line 84, assets/styles/layouts/_front-page.scss */
+/* line 89, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row {
   margin: 0 0 8px;
@@ -20584,7 +20591,7 @@ a.text-dark:focus {
   position: relative;
 }
 
-/* line 93, assets/styles/layouts/_front-page.scss */
+/* line 98, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-statuses {
   position: absolute;
@@ -20594,19 +20601,19 @@ a.text-dark:focus {
   padding: 0;
 }
 
-/* line 101, assets/styles/layouts/_front-page.scss */
+/* line 106, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row.golden-border {
   border-color: #f3c140;
 }
 
-/* line 105, assets/styles/layouts/_front-page.scss */
+/* line 110, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row.top-casion {
   border-color: #f3c140;
 }
 
-/* line 109, assets/styles/layouts/_front-page.scss */
+/* line 114, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-logo,
 .home #casinos-block .casino-list .casino-row .casino-primary-info,
@@ -20617,7 +20624,7 @@ a.text-dark:focus {
   width: 100%;
 }
 
-/* line 118, assets/styles/layouts/_front-page.scss */
+/* line 123, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-logo {
   display: -webkit-box;
@@ -20632,7 +20639,7 @@ a.text-dark:focus {
   max-width: 164px;
 }
 
-/* line 126, assets/styles/layouts/_front-page.scss */
+/* line 131, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-primary-info,
 .home #casinos-block .casino-list .casino-row .casino-secondary-info,
@@ -20645,7 +20652,7 @@ a.text-dark:focus {
   position: relative;
 }
 
-/* line 136, assets/styles/layouts/_front-page.scss */
+/* line 141, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-primary-info:not(.casino-links):not(.casino-badge):not(.casino-payment-gateways)::before,
 .home #casinos-block .casino-list .casino-row .casino-secondary-info:not(.casino-links):not(.casino-badge):not(.casino-payment-gateways)::before,
@@ -20665,13 +20672,13 @@ a.text-dark:focus {
   margin: auto;
 }
 
-/* line 151, assets/styles/layouts/_front-page.scss */
+/* line 156, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-primary-info {
   max-width: 184px;
 }
 
-/* line 154, assets/styles/layouts/_front-page.scss */
+/* line 159, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-primary-info .casino-name-wrapper {
   display: -webkit-box;
@@ -20683,7 +20690,7 @@ a.text-dark:focus {
   line-height: 28px;
 }
 
-/* line 159, assets/styles/layouts/_front-page.scss */
+/* line 164, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-primary-info .casino-name-wrapper .casino-name {
   margin: 0 6px 0 0;
@@ -20693,7 +20700,7 @@ a.text-dark:focus {
   font-size: 24px;
 }
 
-/* line 167, assets/styles/layouts/_front-page.scss */
+/* line 172, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-primary-info .casino-name-wrapper .betting-types-wrapper {
   display: -webkit-box;
@@ -20701,32 +20708,32 @@ a.text-dark:focus {
   display: flex;
 }
 
-/* line 171, assets/styles/layouts/_front-page.scss */
+/* line 176, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-primary-info .casino-name-wrapper .betting-types-wrapper .betting-icon:not(:last-child) {
   margin: 0 6px 0 0;
 }
 
-/* line 178, assets/styles/layouts/_front-page.scss */
+/* line 183, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-primary-info .casino-rating-wrapper,
 .home #casinos-block .casino-list .casino-row .casino-primary-info .casino-compare-wrapper {
   margin: 12px 0 0;
 }
 
-/* line 184, assets/styles/layouts/_front-page.scss */
+/* line 189, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-secondary-info {
   max-width: 251px;
 }
 
-/* line 188, assets/styles/layouts/_front-page.scss */
+/* line 193, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-payment-gateways {
   max-width: 195px;
 }
 
-/* line 191, assets/styles/layouts/_front-page.scss */
+/* line 196, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-payment-gateways-header {
   font-family: 'Roboto Condensed', sans-serif;
@@ -20735,45 +20742,45 @@ a.text-dark:focus {
   margin: 0 0 8px;
 }
 
-/* line 200, assets/styles/layouts/_front-page.scss */
+/* line 205, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-payment-gateways-list .payment-gateway:not(.leftover-gateways) {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
 
-/* line 207, assets/styles/layouts/_front-page.scss */
+/* line 212, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-badge {
   max-width: 120px;
   margin-left: 0;
 }
 
-/* line 211, assets/styles/layouts/_front-page.scss */
+/* line 216, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-badge img {
   width: 100%;
 }
 
-/* line 216, assets/styles/layouts/_front-page.scss */
+/* line 221, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-links {
   max-width: 120px;
 }
 
-/* line 220, assets/styles/layouts/_front-page.scss */
+/* line 225, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-links .casino-buttons-wrapper .casino-site-button {
   margin: 0 0 8px;
 }
 
-/* line 223, assets/styles/layouts/_front-page.scss */
+/* line 228, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-links .casino-buttons-wrapper .casino-site-button span {
   position: relative;
 }
 
-/* line 226, assets/styles/layouts/_front-page.scss */
+/* line 231, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-links .casino-buttons-wrapper .casino-site-button span::after {
   content: '';
@@ -20791,14 +20798,14 @@ a.text-dark:focus {
   margin: auto;
 }
 
-/* line 243, assets/styles/layouts/_front-page.scss */
+/* line 248, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .casino-list .casino-row .casino-links .casino-buttons-wrapper .casino-review-button {
   background-color: #f2f2f3;
   color: #1d2129;
 }
 
-/* line 252, assets/styles/layouts/_front-page.scss */
+/* line 257, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .all-casinos-button {
   background-color: #fff;
@@ -20811,7 +20818,7 @@ a.text-dark:focus {
   display: block;
 }
 
-/* line 261, assets/styles/layouts/_front-page.scss */
+/* line 266, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .all-casinos-button-text {
   color: #17c37b;
@@ -20822,7 +20829,7 @@ a.text-dark:focus {
   position: relative;
 }
 
-/* line 269, assets/styles/layouts/_front-page.scss */
+/* line 274, assets/styles/layouts/_front-page.scss */
 
 .home #casinos-block .all-casinos-button-text::before {
   content: '';
@@ -20840,7 +20847,7 @@ a.text-dark:focus {
   margin: auto;
 }
 
-/* line 287, assets/styles/layouts/_front-page.scss */
+/* line 292, assets/styles/layouts/_front-page.scss */
 
 .home #informational-block {
   position: relative;
@@ -20850,7 +20857,7 @@ a.text-dark:focus {
   background-position: 83% 10%;
 }
 
-/* line 295, assets/styles/layouts/_front-page.scss */
+/* line 300, assets/styles/layouts/_front-page.scss */
 
 .home #informational-block .informational-block-wrapper .informational-block-header {
   font-family: 'Roboto Condensed', sans-serif;
@@ -20861,26 +20868,26 @@ a.text-dark:focus {
   margin: 0 0 46px;
 }
 
-/* line 304, assets/styles/layouts/_front-page.scss */
+/* line 309, assets/styles/layouts/_front-page.scss */
 
 .home #informational-block .informational-block-wrapper .informational-sub-blocks {
   padding: 0;
   list-style-type: none;
 }
 
-/* line 308, assets/styles/layouts/_front-page.scss */
+/* line 313, assets/styles/layouts/_front-page.scss */
 
 .home #informational-block .informational-block-wrapper .informational-sub-blocks .informational-sub-block {
   margin: 0 0 46px;
 }
 
-/* line 311, assets/styles/layouts/_front-page.scss */
+/* line 316, assets/styles/layouts/_front-page.scss */
 
 .home #informational-block .informational-block-wrapper .informational-sub-blocks .informational-sub-block:last-child {
   margin: 0;
 }
 
-/* line 315, assets/styles/layouts/_front-page.scss */
+/* line 320, assets/styles/layouts/_front-page.scss */
 
 .home #informational-block .informational-block-wrapper .informational-sub-blocks .informational-sub-block-header {
   font-family: 'Roboto Condensed', sans-serif;
@@ -20892,7 +20899,7 @@ a.text-dark:focus {
   margin: 0 0 16px;
 }
 
-/* line 324, assets/styles/layouts/_front-page.scss */
+/* line 329, assets/styles/layouts/_front-page.scss */
 
 .home #informational-block .informational-block-wrapper .informational-sub-blocks .informational-sub-block-header::before {
   content: '';
@@ -20910,7 +20917,7 @@ a.text-dark:focus {
   margin: auto;
 }
 
-/* line 341, assets/styles/layouts/_front-page.scss */
+/* line 346, assets/styles/layouts/_front-page.scss */
 
 .home #informational-block .informational-block-wrapper .informational-sub-blocks .informational-sub-block-content {
   -webkit-columns: 2;
@@ -20919,7 +20926,7 @@ a.text-dark:focus {
   line-height: 28px;
 }
 
-/* line 350, assets/styles/layouts/_front-page.scss */
+/* line 355, assets/styles/layouts/_front-page.scss */
 
 .home #latest-news-block {
   background-color: #f2f2f3;
@@ -20927,14 +20934,14 @@ a.text-dark:focus {
   position: relative;
 }
 
-/* line 355, assets/styles/layouts/_front-page.scss */
+/* line 360, assets/styles/layouts/_front-page.scss */
 
 .home #latest-news-block .latest-news-section-header-wrapper {
   position: relative;
   margin: 0 0 60px;
 }
 
-/* line 359, assets/styles/layouts/_front-page.scss */
+/* line 364, assets/styles/layouts/_front-page.scss */
 
 .home #latest-news-block .latest-news-section-header-wrapper .latest-news-section-header {
   font-family: 'Roboto Condensed', sans-serif;
@@ -20943,7 +20950,7 @@ a.text-dark:focus {
   line-height: 52px;
 }
 
-/* line 367, assets/styles/layouts/_front-page.scss */
+/* line 372, assets/styles/layouts/_front-page.scss */
 
 .home #latest-news-block .latest-news-list {
   display: -webkit-box;
@@ -20955,51 +20962,51 @@ a.text-dark:focus {
   list-style-type: none;
 }
 
-/* line 373, assets/styles/layouts/_front-page.scss */
+/* line 378, assets/styles/layouts/_front-page.scss */
 
 .home #latest-news-block .latest-news-list .prev-arrow-button,
 .home #latest-news-block .latest-news-list .next-arrow-button {
   top: -30%;
 }
 
-/* line 378, assets/styles/layouts/_front-page.scss */
+/* line 383, assets/styles/layouts/_front-page.scss */
 
 .home #latest-news-block .latest-news-list .prev-arrow-button {
   right: 6%;
 }
 
-/* line 382, assets/styles/layouts/_front-page.scss */
+/* line 387, assets/styles/layouts/_front-page.scss */
 
 .home #latest-news-block .latest-news-list .next-arrow-button {
   right: 3%;
 }
 
-/* line 386, assets/styles/layouts/_front-page.scss */
+/* line 391, assets/styles/layouts/_front-page.scss */
 
 .home #latest-news-block .latest-news-list .latest-news {
   max-width: 358px;
   margin: 0 30px 30px 0;
 }
 
-/* line 390, assets/styles/layouts/_front-page.scss */
+/* line 395, assets/styles/layouts/_front-page.scss */
 
 .home #latest-news-block .latest-news-list .latest-news:not(.slick-slide):nth-child(3n) {
   margin-right: 0;
 }
 
-/* line 394, assets/styles/layouts/_front-page.scss */
+/* line 399, assets/styles/layouts/_front-page.scss */
 
 .home #latest-news-block .latest-news-list .latest-news-img {
   margin: 0 0 16px;
 }
 
-/* line 397, assets/styles/layouts/_front-page.scss */
+/* line 402, assets/styles/layouts/_front-page.scss */
 
 .home #latest-news-block .latest-news-list .latest-news-img .attachment-post-thumbnail {
   border-radius: 4px;
 }
 
-/* line 403, assets/styles/layouts/_front-page.scss */
+/* line 408, assets/styles/layouts/_front-page.scss */
 
 .home #latest-news-block .latest-news-list .latest-news-info-date-publish {
   font-family: 'Roboto Condensed', sans-serif;
@@ -21009,7 +21016,7 @@ a.text-dark:focus {
   margin: 0 0 10px;
 }
 
-/* line 411, assets/styles/layouts/_front-page.scss */
+/* line 416, assets/styles/layouts/_front-page.scss */
 
 .home #latest-news-block .latest-news-list .latest-news-info-header {
   font-family: 'Roboto', sans-serif;
@@ -21018,7 +21025,7 @@ a.text-dark:focus {
   line-height: 24px;
 }
 
-/* line 419, assets/styles/layouts/_front-page.scss */
+/* line 424, assets/styles/layouts/_front-page.scss */
 
 .home #latest-news-block .latest-news-list .latest-news-link-wrapper {
   font-family: 'Roboto Condensed', sans-serif;
@@ -21028,14 +21035,14 @@ a.text-dark:focus {
   margin: 12px 0 0;
 }
 
-/* line 426, assets/styles/layouts/_front-page.scss */
+/* line 431, assets/styles/layouts/_front-page.scss */
 
 .home #latest-news-block .latest-news-list .latest-news-link-wrapper .latest-news-link {
   color: #5d6066;
   position: relative;
 }
 
-/* line 430, assets/styles/layouts/_front-page.scss */
+/* line 435, assets/styles/layouts/_front-page.scss */
 
 .home #latest-news-block .latest-news-list .latest-news-link-wrapper .latest-news-link::before {
   content: '';
@@ -21053,13 +21060,13 @@ a.text-dark:focus {
   margin: auto;
 }
 
-/* line 450, assets/styles/layouts/_front-page.scss */
+/* line 455, assets/styles/layouts/_front-page.scss */
 
 .home #call-to-action-block {
   padding: 120px 0;
 }
 
-/* line 455, assets/styles/layouts/_front-page.scss */
+/* line 460, assets/styles/layouts/_front-page.scss */
 
 .home #call-to-action-block .call-to-action-wrapper .call-to-action-header h2 {
   font-family: 'Roboto Condensed', sans-serif;
@@ -21069,7 +21076,7 @@ a.text-dark:focus {
   margin: 0 0 24px;
 }
 
-/* line 464, assets/styles/layouts/_front-page.scss */
+/* line 469, assets/styles/layouts/_front-page.scss */
 
 .home #call-to-action-block .call-to-action-wrapper .call-to-action-sub-header {
   font-family: 'Roboto', sans-serif;
@@ -21079,7 +21086,7 @@ a.text-dark:focus {
   margin: 0 0 40px;
 }
 
-/* line 472, assets/styles/layouts/_front-page.scss */
+/* line 477, assets/styles/layouts/_front-page.scss */
 
 .home #call-to-action-block .call-to-action-wrapper .call-to-action-list {
   list-style-type: none;
@@ -21089,7 +21096,7 @@ a.text-dark:focus {
   display: flex;
 }
 
-/* line 477, assets/styles/layouts/_front-page.scss */
+/* line 482, assets/styles/layouts/_front-page.scss */
 
 .home #call-to-action-block .call-to-action-wrapper .call-to-action-list .call-to-action-list-item {
   margin: 0 30px 0 0;
@@ -21097,31 +21104,31 @@ a.text-dark:focus {
   width: 100%;
 }
 
-/* line 482, assets/styles/layouts/_front-page.scss */
+/* line 487, assets/styles/layouts/_front-page.scss */
 
 .home #call-to-action-block .call-to-action-wrapper .call-to-action-list .call-to-action-list-item:nth-child(3n) {
   margin: 0;
 }
 
-/* line 486, assets/styles/layouts/_front-page.scss */
+/* line 491, assets/styles/layouts/_front-page.scss */
 
 .home #call-to-action-block .call-to-action-wrapper .call-to-action-list .call-to-action-list-item .call-to-action-list-item-img {
   margin: 0 0 16px;
 }
 
-/* line 489, assets/styles/layouts/_front-page.scss */
+/* line 494, assets/styles/layouts/_front-page.scss */
 
 .home #call-to-action-block .call-to-action-wrapper .call-to-action-list .call-to-action-list-item .call-to-action-list-item-img img {
   margin: 0;
 }
 
-/* line 494, assets/styles/layouts/_front-page.scss */
+/* line 499, assets/styles/layouts/_front-page.scss */
 
 .home #call-to-action-block .call-to-action-wrapper .call-to-action-list .call-to-action-list-item .call-to-action-list-item-link {
   margin: 20px 0 0;
 }
 
-/* line 497, assets/styles/layouts/_front-page.scss */
+/* line 502, assets/styles/layouts/_front-page.scss */
 
 .home #call-to-action-block .call-to-action-wrapper .call-to-action-list .call-to-action-list-item .call-to-action-list-item-link .call-to-action-list-link {
   color: #17c37b;
@@ -21132,7 +21139,7 @@ a.text-dark:focus {
   position: relative;
 }
 
-/* line 505, assets/styles/layouts/_front-page.scss */
+/* line 510, assets/styles/layouts/_front-page.scss */
 
 .home #call-to-action-block .call-to-action-wrapper .call-to-action-list .call-to-action-list-item .call-to-action-list-item-link .call-to-action-list-link::before {
   content: '';
@@ -21150,7 +21157,7 @@ a.text-dark:focus {
   margin: auto;
 }
 
-/* line 526, assets/styles/layouts/_front-page.scss */
+/* line 531, assets/styles/layouts/_front-page.scss */
 
 .home #informational-block-bottom {
   background-color: #f2f3f2;
@@ -21161,7 +21168,7 @@ a.text-dark:focus {
   background-repeat: no-repeat;
 }
 
-/* line 535, assets/styles/layouts/_front-page.scss */
+/* line 540, assets/styles/layouts/_front-page.scss */
 
 .home #informational-block-bottom .informational-block-bottom-wrapper .informational-block-bottom-header {
   font-family: 'Roboto Condensed', sans-serif;
@@ -21171,19 +21178,19 @@ a.text-dark:focus {
   margin: 0 0 24px 0;
 }
 
-/* line 543, assets/styles/layouts/_front-page.scss */
+/* line 548, assets/styles/layouts/_front-page.scss */
 
 .home #informational-block-bottom .informational-block-bottom-wrapper .informational-block-bottom-sub-header {
   margin: 0 0 54px;
 }
 
-/* line 547, assets/styles/layouts/_front-page.scss */
+/* line 552, assets/styles/layouts/_front-page.scss */
 
 .home #informational-block-bottom .informational-block-bottom-wrapper .informational-block-bottom-sub-block {
   margin-bottom: 48px;
 }
 
-/* line 551, assets/styles/layouts/_front-page.scss */
+/* line 556, assets/styles/layouts/_front-page.scss */
 
 .home #informational-block-bottom .informational-block-bottom-wrapper .informational-block-bottom-sub-block-link-wrapper .informational-sub-block-link {
   color: #17c37b;
@@ -21192,19 +21199,19 @@ a.text-dark:focus {
   text-transform: uppercase;
 }
 
-/* line 562, assets/styles/layouts/_front-page.scss */
+/* line 567, assets/styles/layouts/_front-page.scss */
 
 .home #faq-block {
   padding: 120px 0;
 }
 
-/* line 565, assets/styles/layouts/_front-page.scss */
+/* line 570, assets/styles/layouts/_front-page.scss */
 
 .home #faq-block .faq-block-header-wrapper {
   text-align: center;
 }
 
-/* line 568, assets/styles/layouts/_front-page.scss */
+/* line 573, assets/styles/layouts/_front-page.scss */
 
 .home #faq-block .faq-block-header-wrapper .faq-block-header {
   font-family: 'Roboto Condensed', sans-serif;
@@ -21215,27 +21222,27 @@ a.text-dark:focus {
   margin: 0 0 48px;
 }
 
-/* line 578, assets/styles/layouts/_front-page.scss */
+/* line 583, assets/styles/layouts/_front-page.scss */
 
 .home #faq-block .faq-block-wrapper {
   padding: 0 287px;
 }
 
-/* line 581, assets/styles/layouts/_front-page.scss */
+/* line 586, assets/styles/layouts/_front-page.scss */
 
 .home #faq-block .faq-block-wrapper .faq-block-accordion {
   padding: 0;
   list-style-type: none;
 }
 
-/* line 585, assets/styles/layouts/_front-page.scss */
+/* line 590, assets/styles/layouts/_front-page.scss */
 
 .home #faq-block .faq-block-wrapper .faq-block-accordion .faq-block-card {
   border-bottom: 1px solid #bebec7;
   margin: 0 0 16px;
 }
 
-/* line 589, assets/styles/layouts/_front-page.scss */
+/* line 594, assets/styles/layouts/_front-page.scss */
 
 .home #faq-block .faq-block-wrapper .faq-block-accordion .faq-block-card .faq-block-card-item-header {
   font-family: 'Roboto', sans-serif;
@@ -21257,7 +21264,7 @@ a.text-dark:focus {
   overflow: hidden;
 }
 
-/* line 604, assets/styles/layouts/_front-page.scss */
+/* line 609, assets/styles/layouts/_front-page.scss */
 
 .home #faq-block .faq-block-wrapper .faq-block-accordion .faq-block-card .faq-block-card-item-header[aria-expanded="false"] .plus-sign::after {
   top: 0;
@@ -21265,7 +21272,7 @@ a.text-dark:focus {
   transition: top 0.5s;
 }
 
-/* line 613, assets/styles/layouts/_front-page.scss */
+/* line 618, assets/styles/layouts/_front-page.scss */
 
 .home #faq-block .faq-block-wrapper .faq-block-accordion .faq-block-card .faq-block-card-item-header[aria-expanded="true"] .plus-sign::after {
   top: -165%;
@@ -21273,7 +21280,7 @@ a.text-dark:focus {
   transition: top 0.5s;
 }
 
-/* line 621, assets/styles/layouts/_front-page.scss */
+/* line 626, assets/styles/layouts/_front-page.scss */
 
 .home #faq-block .faq-block-wrapper .faq-block-accordion .faq-block-card .card-body {
   padding: 0;

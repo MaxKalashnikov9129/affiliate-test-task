@@ -7,14 +7,14 @@
 
 defined( 'ABSPATH' ) || die( 'Iwanu ga hana' );
 
-$args         = array(
+$args           = array(
 		'post_type'      => 'casinos',
 		'posts_per_page' => 9,
+		'orderby'        => 'modified',
+		'order'          => 'ASC'
 );
-$casinos_list = new WP_Query( $args );
-
-$betting_type_icons = get_field( 'casino_bet_type_icons', 'option' );
-$age_disclaimer     = get_field( 'age_disclaimer', 'option' );
+$casinos_list   = new WP_Query( $args );
+$age_disclaimer = get_field( 'age_disclaimer', 'option' );
 
 ?>
 
@@ -47,21 +47,23 @@ if ( $casinos_list->have_posts() ) :
 							<?php _e( 'Sort By', 'casadeapostas' ); ?>:
 						</div>
 					</div>
-					<div class="sort-controls-date">
+					<div class="sort-controls-date" data-order-by="modified">
 						<div class="sort-controls-date-icon">
 							<?php echo wp_get_attachment_image( 126, 'full' ); ?>
 						</div>
 						<div class="sort-controls-date-text">
 							<?php _e( 'Date', 'casadeapostas' ); ?>
 						</div>
+						<input type="hidden" class="order" value="ASC" />
 					</div>
-					<div class="sort-controls-rating">
+					<div class="sort-controls-rating" data-order-by="casino_rating">
 						<div class="sort-controls-rating-icon">
 							<?php echo wp_get_attachment_image( 83, 'full' ); ?>
 						</div>
 						<div class="sort-controls-date-text">
 							<?php _e( 'Rating', 'casadeapostas' ); ?>
 						</div>
+						<input type="hidden" class="order" value="ASC" />
 					</div>
 				</div>
 			</div>
@@ -179,7 +181,7 @@ if ( $casinos_list->have_posts() ) :
 						</div>
 
 						<?php
-						$casino_info = get_field( 'casino_info_chart');
+						$casino_info           = get_field( 'casino_info_chart' );
 						$payment_gateways_list = '';
 
 						if ( ! empty( $casino_info ) ) {

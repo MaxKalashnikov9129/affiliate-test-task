@@ -30,8 +30,9 @@ if ( ! function_exists( 'cda_scripts' ) ) :
 
 		// Throw variables from back to front end.
 		$theme_vars = array(
-			'home'   => get_home_url(),
-			'isHome' => is_front_page(),
+			'home'    => get_home_url(),
+			'isHome'  => is_front_page(),
+			'ajaxUrl' => admin_url( 'admin-ajax.php' ),
 		);
 		wp_localize_script( 'main-javascript', 'themeVars', $theme_vars );
 

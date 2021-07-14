@@ -7,7 +7,6 @@
 
 defined( 'ABSPATH' ) || die( 'Iwanu ga hana' );
 
-
 get_header(); ?>
 
 	<div id="primary" class="content-area">

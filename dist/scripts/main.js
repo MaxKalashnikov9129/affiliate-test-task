@@ -2725,6 +2725,34 @@ jQuery(document).ready(function () {});
     prevArrow: '<div class="slick-prev prev-arrow-button"></div>',
     nextArrow: '<div class="slick-next next-arrow-button"></div>'
   });
+  $('.sort-controls-date, .sort-controls-rating').on('click', function () {
+    var sortColumn = $(this).data('order-by');
+    var sortOrder = $(this).find('.order');
+
+    if (sortOrder.val() === 'DESC') {
+      sortOrder.val('ASC');
+    } else {
+      sortOrder.val('DESC');
+    }
+
+    $.ajax({
+      url: themeVars.ajaxUrl,
+      data: {
+        action: 'sort_casino_list',
+        sortColumn: sortColumn,
+        sortOrder: sortOrder.val()
+      },
+      success: function success(response) {
+        if (response.data.code === 204) {
+          $('.sort-controls-message').text(response.data.message);
+          return;
+        }
+
+        $('#casinos-block .casino-list').empty();
+        $('#casinos-block .casino-list').append(response.data.casino_list_items);
+      }
+    });
+  });
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
